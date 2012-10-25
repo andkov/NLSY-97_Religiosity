@@ -7,7 +7,7 @@ data data_NLSY_97_Religion_24102012;
 
 infile 'C:\Users\Serious\Documents\GitHub\NLSY-97_Religiosity\databank\NLSY97_Religion_24102012\NLSY97_Religion_24102012.dat' lrecl=240 missover DSD DLM=' ' print;
 input
-pubid
+id
 famrel097
 sex
 bmonth
@@ -92,7 +92,7 @@ do over nvarlist;
   if nvarlist = -5 then nvarlist = .N;  /* Non-interview */
 end;
 
-label pubid= "PUBID - YTH ID CODE 1997";
+label id= "PUBID - YTH ID CODE 1997";
 label famrel097= "# DAYS/WK TYP FAM RELIGIOUS 1997";
 label sex= "KEY!SEX (SYMBOL) 1997";
 label bmonth= "KEY!BDATE M/Y (SYMBOL) 1997";
