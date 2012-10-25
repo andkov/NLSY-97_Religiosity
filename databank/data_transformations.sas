@@ -32,13 +32,14 @@ relpref
 data small;
 	set Data_nlsy_97_religion_24102012;
 keep 
-pubid bmonth byear race sex attend_100-attend_110
+id bmonth byear race sex attend_100-attend_110
 decide_102 decide_105 decide_108 
 obey_102 obey_105 obey_108 
 values_102 values_105 values_108 
 pray_102 pray_105 pray_108 
 todo_102 todo_105 todo_108
 relpref_105 relpref_108
+agemon_097-agemon_110
 ;run;
 
 /* Excluding the missing data in the attendance variable */;
@@ -98,3 +99,8 @@ run;
 %mend;
 %typology;
 
+PROC EXPORT DATA= WORK.categorized 
+            OUTFILE= "C:\Users\Serious\Documents\GitHub\NLSY-97_Religiosity\databank\
+NLSY97_Religion_10242012.csv" 
+            DBMS=CSV REPLACE;
+RUN;
