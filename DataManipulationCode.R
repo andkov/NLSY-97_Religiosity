@@ -2,19 +2,16 @@ rm(list=ls(all=TRUE)) #Clear all the variables from previous runs
 require(plyr)
 require(reshape2)
 
-if( Sys.info()["nodename"] == "MICKEY" ) 
-  pathDirectory <- "F:/Users/wibeasley/Documents/Consulting/EmosaMcmc/Dev/EMOSA/Data"
-  #pathDirectory <- "F:/Users/wibeasley/Documents/Consulting/EmosaMcmc/Dev/EmosaFork/EMOSA/Data"
-if( Sys.info()["nodename"] == "MERKANEZ-PC" ) 
-  pathDirectory <- "F:/Users/wibeasley/Documents/SSuccess/InterimStudy" #Change this directory location
-
-pathInData <- file.path(pathDirectory, "subject_data_emosa_nonmiss.csv") #The name of the file to read in.
-pathOutData <- file.path(pathDirectory, "SummaryBirthYearByTime.csv") #The name of the file to write to.
+pathDirectory <- "C:/Users/Serious/Documents/GitHub"
+pathBank <- file.path(pathDirectory, "NLSY-97_Religiosity/databank")
+pathInData <- file.path(pathDirectory, "NLSY-97_Religiosity/databank/NLSY97_Religion_10242012.csv")
+pathOutData <- file.path(pathBank, "SummaryBirthYearByTime.csv") #The name of the file to write to.
 
 dsWide <- read.csv(pathInData, stringsAsFactors=FALSE)
 
-times <- 0:8
-years <- 1980:1984 #sort(unique(dsWide$byear))
+times <- 0:10
+years <- 1980:1984 
+sort(unique(dsWide$byear))
 
 #Include only records with a valid birth year
 dsWide <- dsWide[dsWide$byear %in% years, ]
@@ -55,10 +52,11 @@ SummarizeBYearTime <- function( df ) {#df stands for 'data.frame'
   #Equivalent way: cellCount <- apply(dsResult[, c('TotalGoers', 'TotalIrregulars', 'TotalAbsentees')], 1, sum)
   dsResult$ProportionGoers <- dsResult$TotalGoers / cellCount
   dsResult$ProportionIrregulars <- dsResult$TotalIrregulars / cellCount
-  dsResult$ProportionAbsentees <- dsResult$TotalAbsentees / cellCount  
+  dsResult$ProportionAbsentees <- dsResult$TotalAbsentees / cellCount
   
   #Check that the totals sum to 1.0.  Throw an error if not.
   #dsResult$ProportionTotal <- dsResult$ProportionGoers + dsResult$ProportionIrregulars + dsResult$ProportionAbsentees
+  
   proportionTotal <- dsResult$ProportionGoers + dsResult$ProportionIrregulars + dsResult$ProportionAbsentees
   if( abs(proportionTotal - 1) > 1e-7 ) stop("The proportions summing to 1 for each byear*time cell.")
   
@@ -66,6 +64,13 @@ SummarizeBYearTime <- function( df ) {#df stands for 'data.frame'
   return( dsResult)
 }
 
+
+# Create a data.frame that has a row for each unique summarize each byear*time combination.
+dsSummarized <- plyr::ddply(dsLong, .variables=c("byear", "time"), .fun=SummarizeBYearTime)
+
+#Inspect the variables & top part of the results.
+summary(dsSummarized)
+head(dsSummarized, 10)
 # Create a data.frame that has a row for each unique summarize each byear*time combination.
 dsSummarized <- plyr::ddply(dsLong, .variables=c("byear", "time"), .fun=SummarizeBYearTime)
 
@@ -74,3 +79,4 @@ summary(dsSummarized)
 head(dsSummarized, 10)
 
 write.csv(dsSummarized, pathOutData, row.names=FALSE)
+  
