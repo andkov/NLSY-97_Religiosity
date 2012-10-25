@@ -1,5 +1,5 @@
 ## This project mananges getting data from NLSY-97
-Please read these links to help you get started.  If you have questions, please contact Will, Thomas, Arthur, or David.
+Please read these links to help you get started.  If you have questions, please contact Andrey
 
 ### Installation is important
 Instructions for installing the pieces required for generating and running our reports. 
