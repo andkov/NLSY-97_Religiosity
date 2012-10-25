@@ -5,7 +5,7 @@ options nocenter validvarname=any;
 data new_data;
 
 
-infile 'NLSY-97_Religion_24102012.dat' lrecl=240 missover DSD DLM=' ' print;
+infile 'NLSY97_Religion_24102012.dat' lrecl=232 missover DSD DLM=' ' print;
 input
   R0000100
   R0323900
@@ -59,11 +59,6 @@ input
   S7501100
   S7501200
   S8331500
-  S8331700
-  S8331800
-  S8331900
-  S8332000
-  S8332100
   T0008400
   T0008500
   T0739400
@@ -79,6 +74,8 @@ input
   T3601400
   T3601500
   T4495000
+  T5201300
+  T5201400
   T6143400
 ;
 array nvarlist _numeric_;
@@ -147,11 +144,6 @@ end;
   label S7501100 = "CV_AGE(MONTHS)_INT_DATE 2006";
   label S7501200 = "CV_AGE_INT_DATE 2006";
   label S8331500 = "HOW OFTEN R ATTEND WORSHIP SERV 2006";
-  label S8331700 = "R NOT NEED RELIGION TO HAVE VALUES 2006";
-  label S8331800 = "R BELIEVE RELIG TEACHINGS OBEYED 2006";
-  label S8331900 = "R ASKS GOD HELP MAKE DECISIONS 2006";
-  label S8332000 = "GOD NOTHING TO DO HAPPENS TO R 2006";
-  label S8332100 = "R PRAYS MORE THAN ONCE A DAY 2006";
   label T0008400 = "CV_AGE(MONTHS)_INT_DATE 2007";
   label T0008500 = "CV_AGE_INT_DATE 2007";
   label T0739400 = "HOW OFTEN R ATTEND WORSHIP SERV 2007";
@@ -167,6 +159,8 @@ end;
   label T3601400 = "CV_AGE(MONTHS)_INT_DATE 2009";
   label T3601500 = "CV_AGE_INT_DATE 2009";
   label T4495000 = "HOW OFTEN R ATTEND WORSHIP SERV 2009";
+  label T5201300 = "CV_AGE(MONTHS)_INT_DATE 2010";
+  label T5201400 = "CV_AGE_INT_DATE 2010";
   label T6143400 = "HOW OFTEN R ATTEND WORSHIP SERV 2010";
 
 /*---------------------------------------------------------------------*
@@ -236,11 +230,6 @@ end;
   S7501100 = 'CV_AGE_MONTHS_INT_DATE_2006'n
   S7501200 = 'CV_AGE_INT_DATE_2006'n
   S8331500 = 'YSAQ-282A_2006'n
-  S8331700 = 'YSAQ-282A2_2006'n
-  S8331800 = 'YSAQ-282A3_2006'n
-  S8331900 = 'YSAQ-282A4_2006'n
-  S8332000 = 'YSAQ-282A5_2006'n
-  S8332100 = 'YSAQ-282A6_2006'n
   T0008400 = 'CV_AGE_MONTHS_INT_DATE_2007'n
   T0008500 = 'CV_AGE_INT_DATE_2007'n
   T0739400 = 'YSAQ-282A_2007'n
@@ -256,6 +245,8 @@ end;
   T3601400 = 'CV_AGE_MONTHS_INT_DATE_2009'n
   T3601500 = 'CV_AGE_INT_DATE_2009'n
   T4495000 = 'YSAQ-282A_2009'n
+  T5201300 = 'CV_AGE_MONTHS_INT_DATE_2010'n
+  T5201400 = 'CV_AGE_INT_DATE_2010'n
   T6143400 = 'YSAQ-282A_2010'n
 ;
   /* *finish* */
@@ -886,26 +877,6 @@ value vx51f
   8='Everyday'
 ;
 value vx52f
-  1='TRUE'
-  0='FALSE'
-;
-value vx53f
-  1='TRUE'
-  0='FALSE'
-;
-value vx54f
-  1='TRUE'
-  0='FALSE'
-;
-value vx55f
-  1='TRUE'
-  0='FALSE'
-;
-value vx56f
-  1='TRUE'
-  0='FALSE'
-;
-value vx57f
   0-200='0 TO 200: <200'
   201-220='201 TO 220'
   221-240='221 TO 240'
@@ -916,7 +887,7 @@ value vx57f
   321-340='321 TO 340'
   341-360='341 TO 360'
 ;
-value vx58f
+value vx53f
   20='20'
   21='21'
   22='22'
@@ -926,7 +897,7 @@ value vx58f
   26='26'
   27-99='27 TO 99: Age 27 or greater'
 ;
-value vx59f
+value vx54f
   1='Never'
   2='Once or twice'
   3='Less than once a month'
@@ -936,7 +907,7 @@ value vx59f
   7='Several times a week'
   8='Everyday'
 ;
-value vx60f
+value vx55f
   0-200='0 TO 200: <200'
   201-220='201 TO 220'
   221-240='221 TO 240'
@@ -947,7 +918,7 @@ value vx60f
   321-340='321 TO 340'
   341-360='341 TO 360'
 ;
-value vx61f
+value vx56f
   23='23'
   24='24'
   25='25'
@@ -956,7 +927,7 @@ value vx61f
   28='28'
   29='29: Age 29 or greater'
 ;
-value vx62f
+value vx57f
   1='1. Roman Catholic'
   2='2. Baptist'
   3='3. Methodist'
@@ -993,7 +964,7 @@ value vx62f
   995='SUPERVISOR REVIEW'
   999='UNCODABLE'
 ;
-value vx63f
+value vx58f
   1='Never'
   2='Once or twice'
   3='Less than once a month'
@@ -1003,27 +974,27 @@ value vx63f
   7='Several times a week'
   8='Everyday'
 ;
+value vx59f
+  1='TRUE'
+  0='FALSE'
+;
+value vx60f
+  1='TRUE'
+  0='FALSE'
+;
+value vx61f
+  1='TRUE'
+  0='FALSE'
+;
+value vx62f
+  1='TRUE'
+  0='FALSE'
+;
+value vx63f
+  1='TRUE'
+  0='FALSE'
+;
 value vx64f
-  1='TRUE'
-  0='FALSE'
-;
-value vx65f
-  1='TRUE'
-  0='FALSE'
-;
-value vx66f
-  1='TRUE'
-  0='FALSE'
-;
-value vx67f
-  1='TRUE'
-  0='FALSE'
-;
-value vx68f
-  1='TRUE'
-  0='FALSE'
-;
-value vx69f
   0-200='0 TO 200: <200'
   201-220='201 TO 220'
   221-240='221 TO 240'
@@ -1035,7 +1006,7 @@ value vx69f
   341-360='341 TO 360'
   361-380='361 TO 380'
 ;
-value vx70f
+value vx65f
   24='24'
   25='25'
   26='26'
@@ -1044,7 +1015,7 @@ value vx70f
   29='29'
   30-31='30 TO 31: Age 30 or greater'
 ;
-value vx71f
+value vx66f
   1='Never'
   2='Once or twice'
   3='Less than once a month'
@@ -1054,7 +1025,23 @@ value vx71f
   7='Several times a week'
   8='Everyday'
 ;
-value vx72f
+value vx67f
+  0-300='0 TO 300'
+  301-320='301 TO 320'
+  321-340='321 TO 340'
+  341-360='341 TO 360'
+  361-380='361 TO 380'
+;
+value vx68f
+  25='25'
+  26='26'
+  27='27'
+  28='28'
+  29='29'
+  30='30'
+  31='31'
+;
+value vx69f
   1='Never'
   2='Once or twice'
   3='Less than once a month'
@@ -1121,27 +1108,24 @@ tables _ALL_ /MISSING;
   format S7501100 vx49f.;
   format S7501200 vx50f.;
   format S8331500 vx51f.;
-  format S8331700 vx52f.;
-  format S8331800 vx53f.;
-  format S8331900 vx54f.;
-  format S8332000 vx55f.;
-  format S8332100 vx56f.;
-  format T0008400 vx57f.;
-  format T0008500 vx58f.;
-  format T0739400 vx59f.;
-  format T2011000 vx60f.;
-  format T2011100 vx61f.;
-  format T2111400 vx62f.;
-  format T2781700 vx63f.;
-  format T2781900 vx64f.;
-  format T2782000 vx65f.;
-  format T2782100 vx66f.;
-  format T2782200 vx67f.;
-  format T2782300 vx68f.;
-  format T3601400 vx69f.;
-  format T3601500 vx70f.;
-  format T4495000 vx71f.;
-  format T6143400 vx72f.;
+  format T0008400 vx52f.;
+  format T0008500 vx53f.;
+  format T0739400 vx54f.;
+  format T2011000 vx55f.;
+  format T2011100 vx56f.;
+  format T2111400 vx57f.;
+  format T2781700 vx58f.;
+  format T2781900 vx59f.;
+  format T2782000 vx60f.;
+  format T2782100 vx61f.;
+  format T2782200 vx62f.;
+  format T2782300 vx63f.;
+  format T3601400 vx64f.;
+  format T3601500 vx65f.;
+  format T4495000 vx66f.;
+  format T5201300 vx67f.;
+  format T5201400 vx68f.;
+  format T6143400 vx69f.;
 run;
 */
 
@@ -1200,26 +1184,23 @@ tables _ALL_ /MISSING;
   format CV_AGE_MONTHS_INT_DATE_2006 vx49f.;
   format CV_AGE_INT_DATE_2006 vx50f.;
   format YSAQ-282A_2006 vx51f.;
-  format YSAQ-282A2_2006 vx52f.;
-  format YSAQ-282A3_2006 vx53f.;
-  format YSAQ-282A4_2006 vx54f.;
-  format YSAQ-282A5_2006 vx55f.;
-  format YSAQ-282A6_2006 vx56f.;
-  format CV_AGE_MONTHS_INT_DATE_2007 vx57f.;
-  format CV_AGE_INT_DATE_2007 vx58f.;
-  format YSAQ-282A_2007 vx59f.;
-  format CV_AGE_MONTHS_INT_DATE_2008 vx60f.;
-  format CV_AGE_INT_DATE_2008 vx61f.;
-  format YHHI-55709_2008 vx62f.;
-  format YSAQ-282A_2008 vx63f.;
-  format YSAQ-282A2_2008 vx64f.;
-  format YSAQ-282A3_2008 vx65f.;
-  format YSAQ-282A4_2008 vx66f.;
-  format YSAQ-282A5_2008 vx67f.;
-  format YSAQ-282A6_2008 vx68f.;
-  format CV_AGE_MONTHS_INT_DATE_2009 vx69f.;
-  format CV_AGE_INT_DATE_2009 vx70f.;
-  format YSAQ-282A_2009 vx71f.;
-  format YSAQ-282A_2010 vx72f.;
+  format CV_AGE_MONTHS_INT_DATE_2007 vx52f.;
+  format CV_AGE_INT_DATE_2007 vx53f.;
+  format YSAQ-282A_2007 vx54f.;
+  format CV_AGE_MONTHS_INT_DATE_2008 vx55f.;
+  format CV_AGE_INT_DATE_2008 vx56f.;
+  format YHHI-55709_2008 vx57f.;
+  format YSAQ-282A_2008 vx58f.;
+  format YSAQ-282A2_2008 vx59f.;
+  format YSAQ-282A3_2008 vx60f.;
+  format YSAQ-282A4_2008 vx61f.;
+  format YSAQ-282A5_2008 vx62f.;
+  format YSAQ-282A6_2008 vx63f.;
+  format CV_AGE_MONTHS_INT_DATE_2009 vx64f.;
+  format CV_AGE_INT_DATE_2009 vx65f.;
+  format YSAQ-282A_2009 vx66f.;
+  format CV_AGE_MONTHS_INT_DATE_2010 vx67f.;
+  format CV_AGE_INT_DATE_2010 vx68f.;
+  format YSAQ-282A_2010 vx69f.;
 run;
 */

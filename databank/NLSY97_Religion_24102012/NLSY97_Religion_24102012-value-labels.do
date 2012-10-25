@@ -80,16 +80,6 @@ label define vlS7501200   20 "20"  21 "21"  22 "22"  23 "23"  24 "24"  25 "25"  
 label values S7501200 vlS7501200
 label define vlS8331500   1 "Never"  2 "Once or twice"  3 "Less than once a month"  4 "About once a month"  5 "About twice a month"  6 "About once a week"  7 "Several times a week"  8 "Everyday"
 label values S8331500 vlS8331500
-label define vlS8331700   1 "TRUE"  0 "FALSE"
-label values S8331700 vlS8331700
-label define vlS8331800   1 "TRUE"  0 "FALSE"
-label values S8331800 vlS8331800
-label define vlS8331900   1 "TRUE"  0 "FALSE"
-label values S8331900 vlS8331900
-label define vlS8332000   1 "TRUE"  0 "FALSE"
-label values S8332000 vlS8332000
-label define vlS8332100   1 "TRUE"  0 "FALSE"
-label values S8332100 vlS8332100
 label define vlT0008500   20 "20"  21 "21"  22 "22"  23 "23"  24 "24"  25 "25"  26 "26"
 label values T0008500 vlT0008500
 label define vlT0739400   1 "Never"  2 "Once or twice"  3 "Less than once a month"  4 "About once a month"  5 "About twice a month"  6 "About once a week"  7 "Several times a week"  8 "Everyday"
@@ -114,6 +104,8 @@ label define vlT3601500   24 "24"  25 "25"  26 "26"  27 "27"  28 "28"  29 "29"
 label values T3601500 vlT3601500
 label define vlT4495000   1 "Never"  2 "Once or twice"  3 "Less than once a month"  4 "About once a month"  5 "About twice a month"  6 "About once a week"  7 "Several times a week"  8 "Everyday"
 label values T4495000 vlT4495000
+label define vlT5201400   25 "25"  26 "26"  27 "27"  28 "28"  29 "29"  30 "30"  31 "31"
+label values T5201400 vlT5201400
 label define vlT6143400   1 "Never"  2 "Once or twice"  3 "Less than once a month"  4 "About once a month"  5 "About twice a month"  6 "About once a week"  7 "Several times a week"  8 "Everyday"
 label values T6143400 vlT6143400
 /* Crosswalk for Reference number & Question name
@@ -174,11 +166,6 @@ label values T6143400 vlT6143400
   rename S7501100 CV_AGE_MONTHS_INT_DATE
   rename S7501200 CV_AGE_INT_DATE
   rename S8331500 YSAQ_282A
-  rename S8331700 YSAQ_282A2
-  rename S8331800 YSAQ_282A3
-  rename S8331900 YSAQ_282A4
-  rename S8332000 YSAQ_282A5
-  rename S8332100 YSAQ_282A6
   rename T0008400 CV_AGE_MONTHS_INT_DATE
   rename T0008500 CV_AGE_INT_DATE
   rename T0739400 YSAQ_282A
@@ -194,6 +181,8 @@ label values T6143400 vlT6143400
   rename T3601400 CV_AGE_MONTHS_INT_DATE
   rename T3601500 CV_AGE_INT_DATE
   rename T4495000 YSAQ_282A
+  rename T5201300 CV_AGE_MONTHS_INT_DATE
+  rename T5201400 CV_AGE_INT_DATE
   rename T6143400 YSAQ_282A
 */
   /* *end* */  

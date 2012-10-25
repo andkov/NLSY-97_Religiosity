@@ -1664,117 +1664,6 @@ TOTAL =========>    7559   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1425
 Lead In: S83314.00[Default]
 Default Next Question: S83316.00
 --------------------------------------------------------------------------------
-S83317.00    [YSAQ-282A2]                                   Survey Year: 2006
-  PRIMARY VARIABLE
-
- 
-             R DOES NOT NEED RELIGION FOR GOOD VALUES
- 
-I don't need religion to have good values.
- 
-UNIVERSE: Unreachable in current round
- 
-       2       1 TRUE
-       0       0 FALSE
-  -------
-       2
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>       2   VALID SKIP(-4)    7557     NON-INTERVIEW(-5)    1425
- 
-Lead In: S83316.00[Default]
-Default Next Question: S83318.00
---------------------------------------------------------------------------------
-S83318.00    [YSAQ-282A3]                                   Survey Year: 2006
-  PRIMARY VARIABLE
-
- 
-             R BELIEVES RELIGIOUS TEACHINGS ARE TO BE OBEYED EXACTLY AS WRITTEN
- 
-The Bible/Koran/sacred texts should be obeyed exactly as written in every 
-situation.
- 
-UNIVERSE: Unreachable in current round
- 
-       0       1 TRUE
-       2       0 FALSE
-  -------
-       2
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>       2   VALID SKIP(-4)    7557     NON-INTERVIEW(-5)    1425
- 
-Lead In: S83317.00[Default]
-Default Next Question: S83319.00
---------------------------------------------------------------------------------
-S83319.00    [YSAQ-282A4]                                   Survey Year: 2006
-  PRIMARY VARIABLE
-
- 
-             R ASKS GOD HELP MAKE DECISIONS
- 
-I often ask God to help me make decisions.
- 
-UNIVERSE: Unreachable in current round
- 
-       2       1 TRUE
-       0       0 FALSE
-  -------
-       2
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>       2   VALID SKIP(-4)    7557     NON-INTERVIEW(-5)    1425
- 
-Lead In: S83318.00[Default]
-Default Next Question: S83320.00
---------------------------------------------------------------------------------
-S83320.00    [YSAQ-282A5]                                   Survey Year: 2006
-  PRIMARY VARIABLE
-
- 
-             GOD NOTHING TO DO HAPPENS TO R
- 
-God has nothing to do with what happens to me personally.
- 
-UNIVERSE: Unreachable in current round
- 
-       0       1 TRUE
-       2       0 FALSE
-  -------
-       2
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>       2   VALID SKIP(-4)    7557     NON-INTERVIEW(-5)    1425
- 
-Lead In: S83319.00[Default]
-Default Next Question: S83321.00
---------------------------------------------------------------------------------
-S83321.00    [YSAQ-282A6]                                   Survey Year: 2006
-  PRIMARY VARIABLE
-
- 
-             R PRAYS MORE THAN ONCE A DAY
- 
-I pray more than once a day.
- 
-UNIVERSE: Unreachable in current round
- 
-       2       1 TRUE
-       0       0 FALSE
-  -------
-       2
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>       2   VALID SKIP(-4)    7557     NON-INTERVIEW(-5)    1425
- 
-Lead In: S83320.00[Default]
-Default Next Question: S83322.00
---------------------------------------------------------------------------------
 T00084.00    [CV_AGE_MONTHS_INT_DATE]                       Survey Year: 2007
   PRIMARY VARIABLE
 
@@ -2212,6 +2101,62 @@ TOTAL =========>    7559   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1425
  
 Lead In: T44949.00[Default]
 Default Next Question: T44951.00
+--------------------------------------------------------------------------------
+T52013.00    [CV_AGE_MONTHS_INT_DATE]                       Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 300
+    1172         301 TO 320
+    2585         321 TO 340
+    2500         341 TO 360
+    1222         361 TO 380
+  -------
+    7479
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7479   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1505
+ 
+Min:            310        Max:            377        Mean:              340.66
+ 
+Hard Minimum: [0]  Hard Maximum: [300]
+ 
+Lead In: T52012.00[Default]
+Default Next Question: T52014.00
+--------------------------------------------------------------------------------
+T52014.00    [CV_AGE_INT_DATE]                              Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+     146          25
+    1469          26
+    1497          27
+    1565          28
+    1520          29
+    1248          30
+      34          31
+  -------
+    7479
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7479   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1505
+ 
+Min:             25        Max:             31        Mean:                27.9
+ 
+Hard Minimum: [0]  Hard Maximum: [27]
+ 
+Lead In: T52013.00[Default]
+Default Next Question: T52015.00
 --------------------------------------------------------------------------------
 T61434.00    [YSAQ-282A]                                    Survey Year: 2010
   PRIMARY VARIABLE
