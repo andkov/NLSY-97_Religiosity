@@ -8,7 +8,7 @@ data data_NLSY_97_Religion_24102012;
 infile 'C:\Users\Serious\Documents\GitHub\NLSY-97_Religiosity\databank\NLSY97_Religion_24102012\NLSY97_Religion_24102012.dat' lrecl=240 missover DSD DLM=' ' print;
 input
 id
-famrel097
+famrel_1997
 sex
 bmonth
 byear
@@ -16,67 +16,67 @@ praised
 prelpref
 psraised
 psrelpref
-agemon_097
-ageyear_097
+agemon_1997
+ageyear_1997
 samplesype
 race
-famrel098
-agemon_098
-ageyear_098
-famrel099
-agemon_099
-ageyear_099
-famrel100
-attend_100
-agemon_100
-ageyear_100
-attend_101
-agemon_101
-ageyear_101
-attend_102
-values_102
-obey_102
-decide_102
-todo_102
-pray_102
-agemon_102
-ageyear_102
-agemon_103
-ageyear_103
-attend_103
-agemon_104
-ageyear_104
-attend_104
-agemon_105
-ageyear_105
-relpref_105
-attend_105
-values_105
-obey_105
-decide_105
-todo_105
-pray_105
-agemon_106
-ageyear_106
-attend_106
-agemon_107
-ageyear_107
-attend_107
-agemon_108
-ageyear_108
-relpref_108
-attend_108
-values_108
-obey_108
-decide_108
-todo_108
-pray_108
-agemon_109
-ageyear_109
-attend_109
-agemon_110
-ageyear_110
-attend_110
+famrel_1998
+agemon_1998
+ageyear_1998
+famrel_1999
+agemon_1999
+ageyear_1999
+famrel_2000
+attend_2000
+agemon_2000
+ageyear_2000
+attend_2001
+agemon_2001
+ageyear_2001
+attend_2002
+values_2002
+obey_2002
+decide_2002
+todo_2002
+pray_2002
+agemon_2002
+ageyear_2002
+agemon_2003
+ageyear_2003
+attend_2003
+agemon_2004
+ageyear_2004
+attend_2004
+agemon_2005
+ageyear_2005
+relpref_2005
+attend_2005
+values_2005
+obey_2005
+decide_2005
+todo_2005
+pray_2005
+agemon_2006
+ageyear_2006
+attend_2006
+agemon_2007
+ageyear_2007
+attend_2007
+agemon_2008
+ageyear_2008
+relpref_2008
+attend_2008
+values_2008
+obey_2008
+decide_2008
+todo_2008
+pray_2008
+agemon_2009
+ageyear_2009
+attend_2009
+agemon_2010
+ageyear_2010
+attend_2010
 ;
 array nvarlist _numeric_;
 
@@ -93,7 +93,7 @@ do over nvarlist;
 end;
 
 label id= "PUBID - YTH ID CODE 1997";
-label famrel097= "# DAYS/WK TYP FAM RELIGIOUS 1997";
+label famrel_1997= "# DAYS/WK TYP FAM RELIGIOUS 1997";
 label sex= "KEY!SEX (SYMBOL) 1997";
 label bmonth= "KEY!BDATE M/Y (SYMBOL) 1997";
 label byear= "KEY!BDATE M/Y (SYMBOL) 1997";
@@ -101,68 +101,67 @@ label praised= "WHAT RELIG PR RAISED IN? 1997";
 label prelpref= "WHAT IS PR CURR RELIG PREF? 1997";
 label psraised= "WHAT RELIG PR SP/PART RAISED IN? 1997";
 label psrelpref= "PR SP/PART CURR RELIG PREF? 1997";
-label agemon_097= "CV_AGE(MONTHS)_INT_DATE 1997";
-label ageyear_097= "CV_AGE_INT_DATE 1997";
+label agemon_1997= "CV_AGE(MONTHS)_INT_DATE 1997";
+label ageyear_1997= "CV_AGE_INT_DATE 1997";
 label samplesype= "CV_SAMPLE_TYPE 1997";
 label race= "KEY!RACE_ETHNICITY (SYMBOL) 1997";
-label famrel098= "# DAYS/WK TYP FAM RELIGIOUS 1998";
-label agemon_098= "CV_AGE(MONTHS)_INT_DATE 1998";
-label ageyear_098= "CV_AGE_INT_DATE 1998";
-label famrel099= "# DAYS/WK TYP FAM RELIGIOUS 1999";
-label agemon_099= "CV_AGE(MONTHS)_INT_DATE 1999";
-label ageyear_099= "CV_AGE_INT_DATE 1999";
-label famrel100= "# DAYS/WK TYP FAM RELIGIOUS 2000";
-label attend_100= "HOW OFTEN R ATTEND WORSHIP SERV 2000";
-label agemon_100= "CV_AGE(MONTHS)_INT_DATE 2000";
-label ageyear_100= "CV_AGE_INT_DATE 2000";
-label attend_101= "HOW OFTEN R ATTEND WORSHIP SERV 2001";
-label agemon_101= "CV_AGE(MONTHS)_INT_DATE 2001";
-label ageyear_101= "CV_AGE_INT_DATE 2001";
-label attend_102= "HOW OFTEN R ATTEND WORSHIP SERV 2002";
-label values_102= "R NOT NEED RELIGION TO HAVE VALUES 2002";
-label obey_102= "R BELIEVE RELIG TEACHINGS OBEYED 2002";
-label decide_102= "R ASKS GOD HELP MAKE DECISIONS 2002";
-label todo_102= "GOD NOTHING TO DO HAPPENS TO R 2002";
-label pray_102= "R PRAYS MORE THAN ONCE A DAY 2002";
-label agemon_102= "CV_AGE(MONTHS)_INT_DATE 2002";
-label ageyear_102= "CV_AGE_INT_DATE 2002";
-label agemon_103= "CV_AGE(MONTHS)_INT_DATE 2003";
-label ageyear_103= "CV_AGE_INT_DATE 2003";
-label attend_103= "HOW OFTEN R ATTEND WORSHIP SERV 2003";
-label agemon_104= "CV_AGE(MONTHS)_INT_DATE 2004";
-label ageyear_104= "CV_AGE_INT_DATE 2004";
-label attend_104= "HOW OFTEN R ATTEND WORSHIP SERV 2004";
-label agemon_105= "CV_AGE(MONTHS)_INT_DATE 2005";
-label ageyear_105= "CV_AGE_INT_DATE 2005";
-label relpref_105= "R CURR REL PREF 2005";
-label attend_105= "HOW OFTEN R ATTEND WORSHIP SERV 2005";
-label values_105= "R NOT NEED RELIGION TO HAVE VALUES 2005";
-label obey_105= "R BELIEVE RELIG TEACHINGS OBEYED 2005";
-label decide_105= "R ASKS GOD HELP MAKE DECISIONS 2005";
-label todo_105= "GOD NOTHING TO DO HAPPENS TO R 2005";
-label pray_105= "R PRAYS MORE THAN ONCE A DAY 2005";
-label agemon_106= "CV_AGE(MONTHS)_INT_DATE 2006";
-label ageyear_106= "CV_AGE_INT_DATE 2006";
-label attend_106= "HOW OFTEN R ATTEND WORSHIP SERV 2006";
-label agemon_107= "CV_AGE(MONTHS)_INT_DATE 2007";
-label ageyear_107= "CV_AGE_INT_DATE 2007";
-label attend_107= "HOW OFTEN R ATTEND WORSHIP SERV 2007";
-label agemon_108= "CV_AGE(MONTHS)_INT_DATE 2008";
-label ageyear_108= "CV_AGE_INT_DATE 2008";
-label relpref_108= "R CURR REL PREF 2008";
-label attend_108= "HOW OFTEN R ATTEND WORSHIP SERV 2008";
-label values_108= "R NOT NEED RELIGION TO HAVE VALUES 2008";
-label obey_108= "R BELIEVE RELIG TEACHINGS OBEYED 2008";
-label decide_108= "R ASKS GOD HELP MAKE DECISIONS 2008";
-label todo_108= "GOD NOTHING TO DO HAPPENS TO R 2008";
-label pray_108= "R PRAYS MORE THAN ONCE A DAY 2008";
-label agemon_109= "CV_AGE(MONTHS)_INT_DATE 2009";
-label ageyear_109= "CV_AGE_INT_DATE 2009";
-label attend_109= "HOW OFTEN R ATTEND WORSHIP SERV 2009";
-label agemon_110= "CV_AGE(MONTHS)_INT_DATE 2010";
-label ageyear_110= "CV_AGE_INT_DATE 2010";
-label attend_110= "HOW OFTEN R ATTEND WORSHIP SERV 2010";
-
+label famrel_1998= "# DAYS/WK TYP FAM RELIGIOUS 1998";
+label agemon_1998= "CV_AGE(MONTHS)_INT_DATE 1998";
+label ageyear_1998= "CV_AGE_INT_DATE 1998";
+label famrel_1999= "# DAYS/WK TYP FAM RELIGIOUS 1999";
+label agemon_1999= "CV_AGE(MONTHS)_INT_DATE 1999";
+label ageyear_1999= "CV_AGE_INT_DATE 1999";
+label famrel_2000= "# DAYS/WK TYP FAM RELIGIOUS 2000";
+label attend_2000= "HOW OFTEN R ATTEND WORSHIP SERV 2000";
+label agemon_2000= "CV_AGE(MONTHS)_INT_DATE 2000";
+label ageyear_2000= "CV_AGE_INT_DATE 2000";
+label attend_2001= "HOW OFTEN R ATTEND WORSHIP SERV 2001";
+label agemon_2001= "CV_AGE(MONTHS)_INT_DATE 2001";
+label ageyear_2001= "CV_AGE_INT_DATE 2001";
+label attend_2002= "HOW OFTEN R ATTEND WORSHIP SERV 2002";
+label values_2002= "R NOT NEED RELIGION TO HAVE VALUES 2002";
+label obey_2002= "R BELIEVE RELIG TEACHINGS OBEYED 2002";
+label decide_2002= "R ASKS GOD HELP MAKE DECISIONS 2002";
+label todo_2002= "GOD NOTHING TO DO HAPPENS TO R 2002";
+label pray_2002= "R PRAYS MORE THAN ONCE A DAY 2002";
+label agemon_2002= "CV_AGE(MONTHS)_INT_DATE 2002";
+label ageyear_2002= "CV_AGE_INT_DATE 2002";
+label agemon_2003= "CV_AGE(MONTHS)_INT_DATE 2003";
+label ageyear_2003= "CV_AGE_INT_DATE 2003";
+label attend_2003= "HOW OFTEN R ATTEND WORSHIP SERV 2003";
+label agemon_2004= "CV_AGE(MONTHS)_INT_DATE 2004";
+label ageyear_2004= "CV_AGE_INT_DATE 2004";
+label attend_2004= "HOW OFTEN R ATTEND WORSHIP SERV 2004";
+label agemon_2005= "CV_AGE(MONTHS)_INT_DATE 2005";
+label ageyear_2005= "CV_AGE_INT_DATE 2005";
+label relpref_2005= "R CURR REL PREF 2005";
+label attend_2005= "HOW OFTEN R ATTEND WORSHIP SERV 2005";
+label values_2005= "R NOT NEED RELIGION TO HAVE VALUES 2005";
+label obey_2005= "R BELIEVE RELIG TEACHINGS OBEYED 2005";
+label decide_2005= "R ASKS GOD HELP MAKE DECISIONS 2005";
+label todo_2005= "GOD NOTHING TO DO HAPPENS TO R 2005";
+label pray_2005= "R PRAYS MORE THAN ONCE A DAY 2005";
+label agemon_2006= "CV_AGE(MONTHS)_INT_DATE 2006";
+label ageyear_2006= "CV_AGE_INT_DATE 2006";
+label attend_2006= "HOW OFTEN R ATTEND WORSHIP SERV 2006";
+label agemon_2007= "CV_AGE(MONTHS)_INT_DATE 2007";
+label ageyear_2007= "CV_AGE_INT_DATE 2007";
+label attend_2007= "HOW OFTEN R ATTEND WORSHIP SERV 2007";
+label agemon_2008= "CV_AGE(MONTHS)_INT_DATE 2008";
+label ageyear_2008= "CV_AGE_INT_DATE 2008";
+label relpref_2008= "R CURR REL PREF 2008";
+label attend_2008= "HOW OFTEN R ATTEND WORSHIP SERV 2008";
+label values_2008= "R NOT NEED RELIGION TO HAVE VALUES 2008";
+label obey_2008= "R BELIEVE RELIG TEACHINGS OBEYED 2008";
+label decide_2008= "R ASKS GOD HELP MAKE DECISIONS 2008";
+label todo_2008= "GOD NOTHING TO DO HAPPENS TO R 2008";
+label pray_2008= "R PRAYS MORE THAN ONCE A DAY 2008";
+label agemon_2009= "CV_AGE(MONTHS)_INT_DATE 2009";
+label ageyear_2009= "CV_AGE_INT_DATE 2009";
+label attend_2009= "HOW OFTEN R ATTEND WORSHIP SERV 2009";
+label agemon_2010= "CV_AGE(MONTHS)_INT_DATE 2010";
+label ageyear_2010= "CV_AGE_INT_DATE 2010";
+label attend_2010= "HOW OFTEN R ATTEND WORSHIP SERV 2010";
 
 /*---------------------------------------------------------------------*
  *  Crosswalk for Reference number & Question name                     *
