@@ -26,6 +26,7 @@ dsWide <- dsWide[, colnames(dsWide) != "bmonth"]
 
 #Inspect the resulting dataset
 summary(dsWide)
+str(dsWide)
 
 #Transform the wide dataset into a long dataset
 dsLong <- melt(dsWide, id.vars=c("id", "byear"))
