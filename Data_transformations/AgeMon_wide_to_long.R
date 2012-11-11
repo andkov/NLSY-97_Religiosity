@@ -3,16 +3,9 @@ require(ggplot2)
 require(plyr)
 require(reshape2)
 
-
-pathDirectory <- file.path(getwd(), "Github/NLSY-97_Religiosity")
-# or do it explicitely throuh
-#pathDirectory <- "C:/Users/Serious/Documents/GitHub"
-pathBank <- file.path(pathDirectory, "databank")
-pathInData <- file.path(pathBank, "NLSY97_Religion_10242012.csv")
-pathOut <- file.path(pathBank, "temp_NLSY97_Religion_24102012")
-
-
+pathInData <- file.path(  "C:/Users/Serious/Documents/GitHub/NLSY-97_Religiosity/databank/NLSY97_Religion_10242012.csv")
 dsWide <- read.csv(pathInData, stringsAsFactors=FALSE)
+
 
 times <- 0:10
 years <- 1980:1984 
@@ -56,5 +49,5 @@ dsLong <- plyr::rename(dsLong, replace=c(variable="time", value="AgeMon"))
 #summary(dsLong)
 #View(dsLong)
 
-pathOutData <- file.path (pathOut,"agemon.csv") # melted by AgeMon
+pathOutData <- file.path ("C:/Users/Serious/Documents/GitHub/NLSY-97_Religiosity/databank/temp_NLSY97_Religion_24102012/agemon.csv") # melted by AgeMon
 write.csv (dsLong, pathOutData, row.names=FALSE)
