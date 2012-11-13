@@ -32,31 +32,31 @@ relpref
 data small;
 	set Data_nlsy_97_religion_24102012;
 keep 
-id bmonth byear race sex attend_100-attend_110
-decide_102 decide_105 decide_108 
-obey_102 obey_105 obey_108 
-values_102 values_105 values_108 
-pray_102 pray_105 pray_108 
-todo_102 todo_105 todo_108
-relpref_105 relpref_108
-agemon_097-agemon_110
+id bmonth byear race sex attend_2000-attend_2010
+decide_2002 decide_2005 decide_2008 
+obey_2002 obey_2005 obey_2008 
+values_2002 values_2005 values_2008 
+pray_2002 pray_2005 pray_2008 
+todo_2002 todo_2005 todo_2008
+relpref_2005 relpref_2008
+agemon_1997-agemon_2010
 ;run;
 
 /* Excluding the missing data in the attendance variable */;
 data nonmiss;
 	set small;
 where
-attend_100 in(1,2,3,4,5,6,7,8) and
-attend_101 in(1,2,3,4,5,6,7,8)and
-attend_102 in(1,2,3,4,5,6,7,8)and
-attend_103 in(1,2,3,4,5,6,7,8)and
-attend_104 in(1,2,3,4,5,6,7,8)and
-attend_105 in(1,2,3,4,5,6,7,8)and
-attend_106 in(1,2,3,4,5,6,7,8)and
-attend_107 in(1,2,3,4,5,6,7,8)and
-attend_108 in(1,2,3,4,5,6,7,8)and
-attend_109 in(1,2,3,4,5,6,7,8)and
-attend_110 in(1,2,3,4,5,6,7,8);
+attend_2000 in(1,2,3,4,5,6,7,8) and
+attend_2001 in(1,2,3,4,5,6,7,8)and
+attend_2002 in(1,2,3,4,5,6,7,8)and
+attend_2003 in(1,2,3,4,5,6,7,8)and
+attend_2004 in(1,2,3,4,5,6,7,8)and
+attend_2005 in(1,2,3,4,5,6,7,8)and
+attend_2006 in(1,2,3,4,5,6,7,8)and
+attend_2007 in(1,2,3,4,5,6,7,8)and
+attend_2008 in(1,2,3,4,5,6,7,8)and
+attend_2009 in(1,2,3,4,5,6,7,8)and
+attend_2010 in(1,2,3,4,5,6,7,8);
 run;
 
 /* Recoding negatively worded items so that ones (1s) indicate greater religiosity
@@ -69,19 +69,19 @@ pray		I pray more than once a day.
 
 prefect "r" in fron of the new variable indicated "recoded" */;
 
-data recoded; set nonmiss;
-if values_102=1 then rvalues_102=0; else
-if values_102=0 then rvalues_102=1;
-if values_105=1 then rvalues_105=0; else
-if values_105=0 then rvalues_105=1;
-if values_108=1 then rvalues_108=0; else
-if values_108=0 then rvalues_108=1;
-if todo_102=1 then rtodo_102=0; else
-if todo_102=0 then rtodo_102=1;
-if todo_105=1 then rtodo_105=0; else
-if todo_105=0 then rtodo_105=1;
-if todo_108=1 then rtodo_108=0; else
-if todo_108=0 then rtodo_108=1;
+data recoded; set nonmiss; */ alternatively " set "small" OR "nonmiss" to save the cases with missing time points */;
+if values_2002=1 then rvalues_2002=0; else
+if values_2002=0 then rvalues_2002=1;
+if values_2005=1 then rvalues_2005=0; else
+if values_2005=0 then rvalues_2005=1;
+if values_2008=1 then rvalues_2008=0; else
+if values_2008=0 then rvalues_2008=1;
+if todo_2002=1 then rtodo_2002=0; else
+if todo_2002=0 then rtodo_2002=1;
+if todo_2005=1 then rtodo_2005=0; else
+if todo_2005=0 then rtodo_2005=1;
+if todo_2008=1 then rtodo_2008=0; else
+if todo_2008=0 then rtodo_2008=1;
 run;
 
 /* reducing the 1-8 scale of the original question into three categories*/;
@@ -89,7 +89,7 @@ run;
 data categorized;
 	set recoded;
 %macro typology;
-%do year=100 %to 110;
+%do year=2000 %to 2010;
 
 if attend_&year. in(1,2) 		then cat&year.=1 /* Absentee */	; else
 if attend_&year. in(3,4,5) 	    then cat&year.=2 /* Irregular */; else
