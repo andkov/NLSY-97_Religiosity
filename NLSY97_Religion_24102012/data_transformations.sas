@@ -85,7 +85,7 @@ if todo_2008=0 then rtodo_2008=1;
 run;
 
 /* reducing the 1-8 scale of the original question into three categories*/;
-
+/* creates a new variable for category and adds it to the dataset */;
 data categorized;
 	set recoded;
 %macro typology;

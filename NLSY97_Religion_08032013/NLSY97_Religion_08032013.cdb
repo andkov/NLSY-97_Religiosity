@@ -1,0 +1,2189 @@
+R00001.00    [PUBID]                                        Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             PUBID, YOUTH CASE IDENTIFICATION CODE
+ 
+COMMENT: YOUTH CASE IDENTIFICATION CODE
+ 
+       0           0
+     998           1 TO 999
+     999        1000 TO 1999
+     997        2000 TO 2999
+     996        3000 TO 3999
+     998        4000 TO 4999
+     996        5000 TO 5999
+     994        6000 TO 6999
+     994        7000 TO 7999
+     989        8000 TO 8999
+      23        9000 TO 9999
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:           9022        Mean:              4504.3
+ 
+Hard Minimum: [0]  Hard Maximum: [99999999]
+ 
+Lead In: R72976.00[Default]
+Default Next Question: R05363.00
+--------------------------------------------------------------------------------
+R03239.00    [YSAQ-010]                                     Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             # DAYS PER WEEK TYPICALLY FAMILY DOES SOMETHING RELIGIOUS
+ 
+In a typical week, how many days from 0 to 7 do you do something religious as a 
+family such as go to church, pray or read the scriptures together?
+ 
+UNIVERSE: R <= 14 at end of prev year; lives with parent/guardian
+ 
+    1814           0
+    1737           1
+     677           2
+     341           3
+     158           4
+     140           5
+      91           6
+     406           7
+  -------
+    5364
+ 
+Refusal(-1)            7
+Don't Know(-2)         7
+Invalid Skip(-3)       2
+TOTAL =========>    5380   VALID SKIP(-4)    3604     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              7        Mean:                1.65
+ 
+Hard Minimum: [0]  Hard Maximum: [7]
+Soft Minimum: [0]  Soft Maximum: [7]
+ 
+Lead In: R03238.00[Default]
+Default Next Question: R03240.00
+--------------------------------------------------------------------------------
+R05363.00    [KEY!SEX]                                      Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!SEX, RS GENDER (SYMBOL)
+ 
+COMMENT: Gender of Youth
+ 
+    4599       1 Male
+    4385       2 Female
+       0       0 No Information
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R00001.00[Default]
+Default Next Question: R05364.00
+--------------------------------------------------------------------------------
+R05364.01    [KEY!BDATE_M]                                  Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!BDATE, RS BIRTHDATE MONTH/YEAR (SYMBOL)
+ 
+COMMENT: Birthdate of Youth
+ 
+     816           1: January
+     693           2: February
+     760           3: March
+     659           4: April
+     689           5: May
+     720           6: June
+     762           7: July
+     782           8: August
+     839           9: September
+     765          10: October
+     763          11: November
+     736          12: December
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             12        Mean:                6.56
+ 
+Earliest (NonMissing): JANUARY/1980
+Latest   (NonMissing): DECEMBER/1984
+ 
+Hard Minimum: [01/01/1880]  Hard Maximum: [the current date]
+ 
+Lead In: R05363.00[Default]
+Default Next Question: R05366.00
+--------------------------------------------------------------------------------
+R05364.02    [KEY!BDATE_Y]                                  Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!BDATE, RS BIRTHDATE MONTH/YEAR (SYMBOL)
+ 
+COMMENT: Birthdate of Youth
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:           1980        Max:           1984        Mean:             1982.01
+ 
+Earliest (NonMissing): JANUARY/1980
+Latest   (NonMissing): DECEMBER/1984
+ 
+Hard Minimum: [01/01/1880]  Hard Maximum: [the current date]
+ 
+Lead In: R05363.00[Default]
+Default Next Question: R05366.00
+--------------------------------------------------------------------------------
+R05522.00    [P2-013]                                       Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             WHAT RELIGION WAS PR RAISED IN?
+ 
+(HAND CARD B)
+ 
+And now a few questions about your religious background. First, in what religion
+were you raised?
+PLEASE SELECT ONLY ONE.
+ 
+UNIVERSE: All
+ 
+    2754       1 1.  Roman Catholic
+    2120       2 2.  Baptist
+     669       3 3.  Methodist
+     423       4 4.  Lutheran
+     213       5 5.  Presbyterian
+     132       6 6.  Episcopal/Anglican
+     140       7 7.  United Church of Christ (or Congregationalist or 
+                      Evangelical Reformed)
+      81       8 8.  Disciples of Christ (or the Christian Church)
+      36       9 9.  Reform (or Reformed Church in America or Christian Reformed
+                      Church)
+     116      10 10.  Holiness (Nazarene, Wesleyan, Free Methodist)
+     256      11 11.  Pentecostal (Assembly of God, Pentecostal Holiness)
+     194      12 12.  Nondemonimational Christian (Bible Church)
+     341      13 13.  Other Protestant
+      15      14 14.  Jewish  -  Orthodox
+      25      15 15.  Jewish  -  Conservative
+      26      16 16.  Jewish  -  Reform
+       8      17 17.  Jewish  -  Other Jewish
+      57      18 18.  Mormon (all types of Latter Day Saints)
+      15      19 19.  Eastern Orthodox
+       8      20 20.  Unitarian
+      37      21 21.  Muslim (or Moslem or Islam)
+      22      22 22.  Hindu/Buddhist
+      13      23 23.  Native American Tribal Religion
+      42      25 24.  None, no religion - Agnostic (doesn't know if there is a 
+                      God)
+      22      26 25.  None, no religion - Atheist (confident there is no God)
+     138      27 26.  None, no religion - Personal philosophy
+       1      28 27.  Bah'ai
+       0      30 28.  Greek, Roman, Norse, Etc. Mythology
+       0      31 29.  Satanic
+       0      32 30.  Wicca/Witchcraft/Magic/Pagan
+       1      34 31.  Scientology
+       3      35 32.  Other Eastern (Sikh)
+      15      24 33.  Other (SPECIFY)
+  -------
+    7923
+ 
+Refusal(-1)            5
+Don't Know(-2)         8
+TOTAL =========>    7936   VALID SKIP(-4)    1048     NON-INTERVIEW(-5)       0
+ 
+Lead In: R05521.00[Default]
+Default Next Question: R05523.00
+--------------------------------------------------------------------------------
+R05523.00    [P2-014]                                       Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             WHAT IS PRS CURRENT RELIGIOUS PREFERENCE?
+ 
+(HAND CARD B)
+ 
+What is your current religious preference, if any?
+ 
+ENTER ONLY ONE CODE.
+ 
+UNIVERSE: All
+ 
+    2234       1 1.  Roman Catholic
+    1854       2 2.  Baptist
+     524       3 3.  Methodist
+     406       4 4.  Lutheran
+     150       5 5.  Presbyterian
+     103       6 6.  Episcopal/Anglican
+     142       7 7.  United Church of Christ (or Congregationalist or 
+                      Evangelical Reformed)
+     101       8 8.  Disciples of Christ (or the Christian Church)
+      36       9 9.  Reform (or Reformed Church in America or Christian Reformed
+                      Church)
+     129      10 10.  Holiness (Nazarene, Wesleyan, Free Methodist)
+     417      11 11.  Pentecostal (Assembly of God, Pentecostal Holiness)
+     524      12 12.  Nondemonimational Christian (Bible Church)
+     396      13 13.  Other Protestant
+      12      14 14.  Jewish  -  Orthodox
+      22      15 15.  Jewish  -  Conservative
+      31      16 16.  Jewish  -  Reform
+       7      17 17.  Jewish  -  Other Jewish
+      92      18 18.  Mormon (all types of Latter Day Saints)
+      12      19 19.  Eastern Orthodox
+      15      20 20.  Unitarian
+      52      21 21.  Muslim (or Moslem or Islam)
+      20      22 22.  Hindu/Buddhist
+      17      23 23.  Native American Tribal Religion
+      90      25 24.  None, no religion - Agnostic (doesn't know if there is a 
+                      God)
+      29      26 25.  None, no religion - Atheist (confident there is no God)
+     463      27 26.  None, no religion - Personal philosophy
+       0      28 27.  Bah'ai
+       0      30 28.  Greek, Roman, Norse, Etc. Mythology
+       1      31 29.  Satanic
+       8      32 30.  Wicca/Witchcraft/Magic/Pagan
+       1      34 31.  Scientology
+       2      35 32.  Other Eastern (Sikh)
+      24      24 33.  Other (SPECIFY)
+  -------
+    7914
+ 
+Refusal(-1)            8
+Don't Know(-2)        14
+TOTAL =========>    7936   VALID SKIP(-4)    1048     NON-INTERVIEW(-5)       0
+ 
+Lead In: R05522.00[Default]
+Default Next Question: R05524.00
+--------------------------------------------------------------------------------
+R05557.00    [P2-049]                                       Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             WHAT RELIGION WAS PRS SPOUSE/PARTNER RAISED IN?
+ 
+(HAND CARD B)
+ 
+And now a few questions about [this spouse/partner]'s religious background. 
+First, in what religion was [this spouse/partner] raised?
+ 
+PLEASE SELECT ONLY ONE.
+ 
+UNIVERSE: R lives with S/P
+ 
+    1949       1 1.  Roman Catholic
+    1167       2 2.  Baptist
+     379       3 3.  Methodist
+     306       4 4.  Lutheran
+     126       5 5.  Presbyterian
+      82       6 6.  Episcopal/Anglican
+      98       7 7.  United Church of Christ (or Congregationalist or 
+                      Evangelical Reformed)
+      48       8 8.  Disciples of Christ (or the Christian Church)
+      29       9 9.  Reform (or Reformed Church in America or Christian Reformed
+                      Church)
+      52      10 10.  Holiness (Nazarene, Wesleyan, Free Methodist)
+     140      11 11.  Pentecostal (Assembly of God, Pentecostal Holiness)
+     109      12 12.  Nondemonimational Christian (Bible Church)
+     197      13 13.  Other Protestant
+      15      14 14.  Jewish  -  Orthodox
+      21      15 15.  Jewish  -  Conservative
+      19      16 16.  Jewish  -  Reform
+       7      17 17.  Jewish  -  Other Jewish
+      54      18 18.  Mormon (all types of Latter Day Saints)
+      11      19 19.  Eastern Orthodox
+       6      20 20.  Unitarian
+      28      21 21.  Muslim (or Moslem or Islam)
+      23      22 22.  Hindu/Buddhist
+       8      23 23.  Native American Tribal Religion
+      33      25 24.  None, no religion - Agnostic (doesn't know if there is a 
+                      God)
+      16      26 25.  None, no religion - Atheist (confident there is no God)
+     144      27 26.  None, no religion - Personal philosophy
+       0      28 27.  Bah'ai
+       1      30 28.  Greek, Roman, Norse, Etc. Mythology
+       0      31 29.  Satanic
+       0      32 30.  Wicca/Witchcraft/Magic/Pagan
+       0      34 31.  Scientology
+       1      35 32.  Other Eastern (Sikh)
+       4      24 33.  Other (SPECIFY)
+  -------
+    5073
+ 
+Refusal(-1)           10
+Don't Know(-2)       133
+TOTAL =========>    5216   VALID SKIP(-4)    3768     NON-INTERVIEW(-5)       0
+ 
+Lead In: R05556.00[Default]
+Default Next Question: R05558.00
+--------------------------------------------------------------------------------
+R05558.00    [P2-050]                                       Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             WHAT IS PRS SPOUSE/PARTNER CURRENT RELIGIOUS PREFERENCE?
+ 
+(HAND CARD B)
+ 
+What is [this spouse/partner]'s current religious preference, if any?
+ 
+ENTER ONLY ONE CODE.
+ 
+UNIVERSE: R lives with S/P
+ 
+    1601       1 1.  Roman Catholic
+    1011       2 2.  Baptist
+     323       3 3.  Methodist
+     284       4 4.  Lutheran
+     105       5 5.  Presbyterian
+      74       6 6.  Episcopal/Anglican
+      88       7 7.  United Church of Christ (or Congregationalist or 
+                      Evangelical Reformed)
+      57       8 8.  Disciples of Christ (or the Christian Church)
+      23       9 9.  Reform (or Reformed Church in America or Christian Reformed
+                      Church)
+      56      10 10.  Holiness (Nazarene, Wesleyan, Free Methodist)
+     224      11 11.  Pentecostal (Assembly of God, Pentecostal Holiness)
+     280      12 12.  Nondemonimational Christian (Bible Church)
+     236      13 13.  Other Protestant
+      13      14 14.  Jewish  -  Orthodox
+      21      15 15.  Jewish  -  Conservative
+      19      16 16.  Jewish  -  Reform
+       4      17 17.  Jewish  -  Other Jewish
+      67      18 18.  Mormon (all types of Latter Day Saints)
+      10      19 19.  Eastern Orthodox
+       6      20 20.  Unitarian
+      35      21 21.  Muslim (or Moslem or Islam)
+      15      22 22.  Hindu/Buddhist
+      12      23 23.  Native American Tribal Religion
+     102      25 24.  None, no religion - Agnostic (doesn't know if there is a 
+                      God)
+      28      26 25.  None, no religion - Atheist (confident there is no God)
+     440      27 26.  None, no religion - Personal philosophy
+       0      28 27.  Bah'ai
+       1      30 28.  Greek, Roman, Norse, Etc. Mythology
+       0      31 29.  Satanic
+       1      32 30.  Wicca/Witchcraft/Magic/Pagan
+       2      34 31.  Scientology
+       0      35 32.  Other Eastern (Sikh)
+      11      24 33.  Other (SPECIFY)
+  -------
+    5149
+ 
+Refusal(-1)            9
+Don't Know(-2)        58
+TOTAL =========>    5216   VALID SKIP(-4)    3768     NON-INTERVIEW(-5)       0
+ 
+Lead In: R05557.00[Default]
+Default Next Question: R05559.00
+--------------------------------------------------------------------------------
+R11939.00    [CV_AGE(MONTHS)_INT_DATE]                      Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 139: <140
+     395         140 TO 150
+    1418         151 TO 160
+    1456         161 TO 170
+    1560         171 TO 180
+    1562         181 TO 190
+    1482         191 TO 200
+    1053         201 TO 210
+      58         211 TO 220
+       0         221 TO 230
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:            146        Max:            219        Mean:              178.21
+ 
+Hard Minimum: [0]  Hard Maximum: [228]
+ 
+Lead In: R13023.00[Default]
+Default Next Question: R11940.00
+--------------------------------------------------------------------------------
+R11941.00    [CV_AGE_INT_DATE]                              Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+       0           0 TO 11: LESS THAN 12
+    1169          12
+    1726          13
+    1858          14
+    1877          15
+    1719          16
+     614          17
+      21          18
+       0          19 TO 999: GREATER THAN 18
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:             12        Max:             18        Mean:               14.35
+ 
+Hard Minimum: [0]  Hard Maximum: [25]
+ 
+Lead In: R11940.00[Default]
+Default Next Question: R11980.00
+--------------------------------------------------------------------------------
+R12358.00    [CV_SAMPLE_TYPE]                               Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             SAMPLE TYPE.  CROSS-SECTIONAL OR OVERSAMPLE
+ 
+Sample type: Is the respondent a member of the cross-sectional sample or the 
+oversample?
+ 
+    6748       1 Cross-sectional
+    2236       0 Oversample
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R12357.00[Default]
+Default Next Question: R12359.00
+--------------------------------------------------------------------------------
+R14826.00    [KEY!RACE_ETHNICITY]                           Survey Year: 1997
+  PRIMARY VARIABLE
+
+ 
+             KEY!RACE_ETHNICITY, COMBINED RACE AND ETHNICITY (SYMBOL)
+ 
+COMMENT: Combined race - ethnicity variable
+ 
+    2335       1 Black
+    1901       2 Hispanic
+      83       3 Mixed Race (Non-Hispanic)
+    4665       4 Non-Black / Non-Hispanic
+  -------
+    8984
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Lead In: R05387.00[Default]
+Default Next Question: R05389.00
+--------------------------------------------------------------------------------
+R21652.00    [YSAQ-010]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             # DAYS PER WEEK TYPICALLY FAMILY DOES SOMETHING RELIGIOUS
+ 
+In a typical week, how many days from 0 to 7 do you do something religious as a 
+family such as go to church, pray or read the scriptures together?
+ 
+UNIVERSE: R <= 14 at end of 1996; lives with parent/guardian
+ 
+    1957           0
+    1489           1
+     544           2
+     260           3
+     107           4
+      91           5
+      67           6
+     252           7
+  -------
+    4767
+ 
+Refusal(-1)            9
+Don't Know(-2)         5
+TOTAL =========>    4781   VALID SKIP(-4)    3605     NON-INTERVIEW(-5)     598
+ 
+Min:              0        Max:              7        Mean:                1.34
+ 
+Hard Minimum: [0]  Hard Maximum: [7]
+Soft Minimum: [0]  Soft Maximum: [7]
+ 
+Lead In: R21651.00[Default]
+Default Next Question: R21653.00
+--------------------------------------------------------------------------------
+R25534.00    [CV_AGE(MONTHS)_INT_DATE]                      Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 139: <140
+       0         140 TO 150
+       0         151 TO 160
+     370         161 TO 170
+    1408         171 TO 180
+    1382         181 TO 190
+    1470         191 TO 200
+    1478         201 TO 210
+    1319         211 TO 220
+     944         221 TO 230
+      15         231 TO 240
+  -------
+    8386
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8386   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     598
+ 
+Min:            166        Max:            232        Mean:              197.54
+ 
+Hard Minimum: [0]  Hard Maximum: [228]
+ 
+Lead In: R27234.00[Default]
+Default Next Question: R25535.00
+--------------------------------------------------------------------------------
+R25535.00    [CV_AGE_INT_DATE]                              Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+       0           0 TO 11: LESS THAN 12
+       0          12
+     105          13
+    1597          14
+    1676          15
+    1736          16
+    1747          17
+    1416          18
+     109          19 TO 999: GREATER THAN 18
+  -------
+    8386
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8386   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     598
+ 
+Min:             13        Max:             19        Mean:               15.97
+ 
+Hard Minimum: [0]  Hard Maximum: [25]
+ 
+Lead In: R25534.00[Default]
+Default Next Question: R25559.00
+--------------------------------------------------------------------------------
+R34831.00    [YSAQ-010]                                     Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             # DAYS PER WEEK TYPICALLY FAMILY DOES SOMETHING RELIGIOUS
+ 
+In a typical week, how many days from 0 to 7 do you do something religious as a 
+family such as go to church, pray or read the scriptures together?
+ 
+UNIVERSE: R <= 14 at end of 1996; lives with parent/guardian
+ 
+    1960           0
+    1546           1
+     544           2
+     283           3
+     114           4
+     108           5
+      53           6
+     219           7
+  -------
+    4827
+ 
+Refusal(-1)           25
+Don't Know(-2)         4
+TOTAL =========>    4856   VALID SKIP(-4)    3352     NON-INTERVIEW(-5)     776
+ 
+Min:              0        Max:              7        Mean:                1.31
+ 
+Hard Minimum: [0]  Hard Maximum: [7]
+Soft Minimum: [0]  Soft Maximum: [7]
+ 
+Lead In: R34830.00[Default]
+Default Next Question: R34832.00
+--------------------------------------------------------------------------------
+R38762.00    [CV_AGE(MONTHS)_INT_DATE]                      Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 139: <140
+       0         140 TO 150
+       0         151 TO 160
+       0         161 TO 170
+     176         171 TO 180
+    1365         181 TO 190
+    1390         191 TO 200
+    1439         201 TO 210
+    1402         211 TO 220
+    1284         221 TO 230
+    1105         231 TO 240
+      47         241 TO 250
+  -------
+    8208
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8208   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     776
+ 
+Min:            176        Max:            243        Mean:              208.93
+ 
+Hard Minimum: [0]  Hard Maximum: [245]
+ 
+Lead In: R38761.00[Default]
+Default Next Question: R38763.00
+--------------------------------------------------------------------------------
+R38763.00    [CV_AGE_INT_DATE]                              Survey Year: 1999
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+       0           0 TO 11: LESS THAN 12
+       0          12
+       0          13
+     109          14
+    1664          15
+    1632          16
+    1728          17
+    1622          18
+    1453          19 TO 999: GREATER THAN 18
+  -------
+    8208
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8208   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     776
+ 
+Min:             14        Max:             20        Mean:               16.92
+ 
+Hard Minimum: [0]  Hard Maximum: [25]
+ 
+Lead In: R38762.00[Default]
+Default Next Question: R38789.00
+--------------------------------------------------------------------------------
+R48813.00    [YSAQ-010]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             # DAYS PER WEEK TYPICALLY FAMILY DOES SOMETHING RELIGIOUS
+ 
+In a typical week, how many days from 0 to 7 do you do something religious as a 
+family such as go to church, pray or read the scriptures together?
+ 
+UNIVERSE: R <= 14 at end of prev year; lives with parent/guardian
+ 
+    1999           0
+    1379           1
+     427           2
+     206           3
+     109           4
+      91           5
+      53           6
+     191           7
+  -------
+    4455
+ 
+Refusal(-1)           17
+Don't Know(-2)         7
+TOTAL =========>    4479   VALID SKIP(-4)    3601     NON-INTERVIEW(-5)     904
+ 
+Min:              0        Max:              7        Mean:                1.21
+ 
+Hard Minimum: [0]  Hard Maximum: [7]
+Soft Minimum: [0]  Soft Maximum: [7]
+ 
+Lead In: R48812.00[Default]
+Default Next Question: R48814.00
+--------------------------------------------------------------------------------
+R48934.00    [YSAQ-282A]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background.  In the past 12 months, how 
+often have you attended a worship service (like a church or synagogue service, 
+or a service at a mosque?)
+ 
+UNIVERSE: All
+ 
+    2022       1 Never
+    1770       2 Once or twice
+    1056       3 Less than once a month / 3-12 times
+     506       4 About once a month / 12 times
+     518       5 About twice a month / 24 times
+    1477       6 About once a week
+     617       7 Several times a week
+      53       8 Everyday
+  -------
+    8019
+ 
+Refusal(-1)           44
+Don't Know(-2)        17
+TOTAL =========>    8080   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     904
+ 
+Lead In: R48926.00[Default] R48933.00[Default]  R48928.00[1:1] R48927.00[0:0]
+Default Next Question: R48935.00
+--------------------------------------------------------------------------------
+R54536.00    [CV_AGE(MONTHS)_INT_DATE]                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 139: <140
+       0         140 TO 150
+       0         151 TO 160
+       0         161 TO 170
+       0         171 TO 180
+       1         181 TO 190
+    1149         191 TO 200
+    1381         201 TO 210
+    1364         211 TO 220
+    1381         221 TO 230
+    1335         231 TO 240
+    1195         241 TO 250
+     274         251 TO 260
+  -------
+    8080
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8080   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     904
+ 
+Min:            184        Max:            256        Mean:              221.71
+ 
+Hard Minimum: [0]  Hard Maximum: [245]
+ 
+Lead In: R54535.00[Default]
+Default Next Question: R54537.00
+--------------------------------------------------------------------------------
+R54537.00    [CV_AGE_INT_DATE]                              Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+       0          14
+      58          15
+    1555          16
+    1667          17
+    1657          18
+    3007          19 TO 20: 19
+       0          20
+     136          21 TO 100: Age 21 and older
+  -------
+    8080
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8080   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     904
+ 
+Min:             15        Max:             21        Mean:               17.98
+ 
+Hard Minimum: [0]  Hard Maximum: [25]
+ 
+Lead In: R54536.00[Default]
+Default Next Question: R54565.00
+--------------------------------------------------------------------------------
+R65201.00    [YSAQ-282A]                                    Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service (like a church or synagogue service, 
+or a service at a mosque?)
+ 
+UNIVERSE: All
+ 
+    2062       1 Never
+    1753       2 Once or twice
+    1097       3 Less than once a month / 3-12 times
+     562       4 About once a month / 12 times
+     556       5 About twice a month / 24 times
+    1262       6 About once a week
+     520       7 Several times a week
+      38       8 Everyday
+  -------
+    7850
+ 
+Refusal(-1)           27
+Don't Know(-2)         5
+TOTAL =========>    7882   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1102
+ 
+Lead In: R65048.00[Default] R65200.00[Default] R65104.00[Default]  
+         R65199.00[0:0]
+Default Next Question: R65202.00
+--------------------------------------------------------------------------------
+R72159.00    [CV_AGE(MONTHS)_INT_DATE]                      Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 139: <140
+       0         140 TO 150
+       0         151 TO 160
+       0         161 TO 170
+       0         171 TO 180
+       0         181 TO 190
+       0         191 TO 200
+     896         201 TO 210
+    1359         211 TO 220
+    1315         221 TO 230
+    1343         231 TO 240
+    1324         241 TO 250
+    1186         251 TO 260
+     459         261 TO 270
+  -------
+    7882
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7882   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1102
+ 
+Min:            203        Max:            268        Mean:              233.46
+ 
+Hard Minimum: [0]  Hard Maximum: [245]
+ 
+Lead In: R72158.00[Default]
+Default Next Question: R72160.00
+--------------------------------------------------------------------------------
+R72160.00    [CV_AGE_INT_DATE]                              Survey Year: 2001
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+       0          14
+       0          15
+      67          16
+    1548          17
+    1620          18
+    1610          19
+    1588          20
+    1338          21
+     111          22 TO 100: Age 22 or greater
+  -------
+    7882
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7882   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1102
+ 
+Min:             16        Max:             22        Mean:               18.96
+ 
+Hard Minimum: [0]  Hard Maximum: [25]
+ 
+Lead In: R72159.00[Default]
+Default Next Question: R72190.00
+--------------------------------------------------------------------------------
+S09193.00    [YSAQ-282A]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service (like a church or synagogue service, 
+or a service at a mosque?)
+ 
+UNIVERSE: All
+ 
+    2351       1 Never
+    1847       2 Once or twice
+    1156       3 Less than once a month / 3-12 times
+     535       4 About once a month / 12 times
+     494       5 About twice a month / 24 times
+    1057       6 About once a week
+     387       7 Several times a week
+      38       8 Everyday
+  -------
+    7865
+ 
+Refusal(-1)           23
+Don't Know(-2)         8
+TOTAL =========>    7896   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1088
+ 
+Lead In: S09192.00[Default]
+Default Next Question: S09194.00
+--------------------------------------------------------------------------------
+S09194.00    [YSAQ-282A2]                                   Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             R DOES NOT NEED RELIGION FOR GOOD VALUES
+ 
+I don't need religion to have good values.
+ 
+UNIVERSE: All
+ 
+    3829       1 TRUE
+    4014       0 FALSE
+  -------
+    7843
+ 
+Refusal(-1)           33
+Don't Know(-2)        20
+TOTAL =========>    7896   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1088
+ 
+Lead In: S09193.00[Default]
+Default Next Question: S09195.00
+--------------------------------------------------------------------------------
+S09195.00    [YSAQ-282A3]                                   Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             R BELIEVES RELIGIOUS TEACHINGS ARE TO BE OBEYED EXACTLY AS WRITTEN
+ 
+The Bible/Koran/Torah/religious teachings should be obeyed exactly as written in
+every situation.
+ 
+UNIVERSE: All
+ 
+    3020       1 TRUE
+    4768       0 FALSE
+  -------
+    7788
+ 
+Refusal(-1)           42
+Don't Know(-2)        66
+TOTAL =========>    7896   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1088
+ 
+Lead In: S09194.00[Default]
+Default Next Question: S09196.00
+--------------------------------------------------------------------------------
+S09196.00    [YSAQ-282A4]                                   Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             R ASKS GOD HELP MAKE DECISIONS
+ 
+I often ask God to help me make decisions.
+ 
+UNIVERSE: All
+ 
+    5689       1 TRUE
+    2151       0 FALSE
+  -------
+    7840
+ 
+Refusal(-1)           38
+Don't Know(-2)        18
+TOTAL =========>    7896   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1088
+ 
+Lead In: S09195.00[Default]
+Default Next Question: S09197.00
+--------------------------------------------------------------------------------
+S09197.00    [YSAQ-282A5]                                   Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             GOD NOTHING TO DO HAPPENS TO R
+ 
+God has nothing to do with what happens to me personally.
+ 
+UNIVERSE: All
+ 
+    1856       1 TRUE
+    5945       0 FALSE
+  -------
+    7801
+ 
+Refusal(-1)           43
+Don't Know(-2)        52
+TOTAL =========>    7896   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1088
+ 
+Lead In: S09196.00[Default]
+Default Next Question: S09198.00
+--------------------------------------------------------------------------------
+S09198.00    [YSAQ-282A6]                                   Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             R PRAYS MORE THAN ONCE A DAY
+ 
+I pray more than once a day.
+ 
+UNIVERSE: All
+ 
+    2783       1 TRUE
+    5057       0 FALSE
+  -------
+    7840
+ 
+Refusal(-1)           41
+Don't Know(-2)        15
+TOTAL =========>    7896   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1088
+ 
+Lead In: S09197.00[Default]
+Default Next Question: S09199.00
+--------------------------------------------------------------------------------
+S15313.00    [CV_AGE(MONTHS)_INT_DATE]                      Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 139: <140
+       0         140 TO 150
+       0         151 TO 160
+       0         161 TO 170
+       0         171 TO 180
+       0         181 TO 190
+       0         191 TO 200
+       0         201 TO 210
+     614         211 TO 220
+    1350         221 TO 230
+    1306         231 TO 240
+    1377         241 TO 250
+    1335         251 TO 260
+    1239         261 TO 270
+     672         271 TO 280
+       3         281 TO 290
+       0         291 TO 300
+  -------
+    7896
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7896   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1088
+ 
+Min:            216        Max:            282        Mean:               245.5
+ 
+Hard Minimum: [0]  Hard Maximum: [300]
+ 
+Lead In: S15312.00[Default]
+Default Next Question: S15314.00
+--------------------------------------------------------------------------------
+S15314.00    [CV_AGE_INT_DATE]                              Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+       0          14
+       0          15
+       0          16
+       0          17
+    1620          18
+    1591          19
+    1651          20
+    1588          21
+    1446          22 TO 100: Age 22 or greater
+  -------
+    7896
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7896   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1088
+ 
+Min:             18        Max:             23        Mean:               19.97
+ 
+Hard Minimum: [0]  Hard Maximum: [26]
+ 
+Lead In: S15313.00[Default]
+Default Next Question: S15346.00
+--------------------------------------------------------------------------------
+S20009.00    [CV_AGE(MONTHS)_INT_DATE]                      Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 200
+       0         201 TO 210
+       0         211 TO 220
+     407         221 TO 230
+    1271         231 TO 240
+    1348         241 TO 250
+    1346         251 TO 260
+    1327         261 TO 270
+    1219         271 TO 280
+     821         281 TO 290
+      15         291 TO 300
+  -------
+    7754
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7754   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1230
+ 
+Min:            226        Max:            294        Mean:              257.05
+ 
+Hard Minimum: [0]  Hard Maximum: [300]
+ 
+Lead In: S20008.00[Default]
+Default Next Question: S20010.00
+--------------------------------------------------------------------------------
+S20010.00    [CV_AGE_INT_DATE]                              Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+     113          18
+    1501          19
+    1605          20
+    1590          21
+    1570          22
+    1296          23
+      79          24 TO 100: Age 24 or greater
+  -------
+    7754
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7754   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1230
+ 
+Min:             18        Max:             24        Mean:               20.93
+ 
+Hard Minimum: [0]  Hard Maximum: [27]
+ 
+Lead In: S20009.00[Default]
+Default Next Question: S20044.00
+--------------------------------------------------------------------------------
+S29878.00    [YSAQ-282A]                                    Survey Year: 2003
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service like a church or synagogue service, or
+a service at a mosque?
+ 
+UNIVERSE: All
+ 
+    2407       1 Never
+    1768       2 Once or twice
+     903       3 Less than once a month
+     573       4 About once a month
+     648       5 About twice a month
+    1000       6 About once a week
+     383       7 Several times a week
+      33       8 Everyday
+  -------
+    7715
+ 
+Refusal(-1)           29
+Don't Know(-2)        10
+TOTAL =========>    7754   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1230
+ 
+Lead In: S29877.00[Default]  S29876.00[0:0]
+Default Next Question: S29879.00
+--------------------------------------------------------------------------------
+S38010.00    [CV_AGE_MONTHS_INT_DATE]                       Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 200: <200
+       0         201 TO 220
+     105         221 TO 240
+    2482         241 TO 260
+    2591         261 TO 280
+    2266         281 TO 300
+      58         301 TO 320
+       0         321 TO 340
+  -------
+    7502
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7502   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1482
+ 
+Min:            239        Max:            305        Mean:              269.53
+ 
+Hard Minimum: [0]  Hard Maximum: [300]
+ 
+Lead In: S38009.00[Default]
+Default Next Question: S38011.00
+--------------------------------------------------------------------------------
+S38011.00    [CV_AGE_INT_DATE]                              Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+       0          18
+      67          19
+    1452          20
+    1522          21
+    1560          22
+    1523          23
+    1378          24 TO 100: Age 24 or greater
+  -------
+    7502
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7502   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1482
+ 
+Min:             19        Max:             25        Mean:               21.97
+ 
+Hard Minimum: [0]  Hard Maximum: [27]
+ 
+Lead In: S38010.00[Default]
+Default Next Question: S38047.00
+--------------------------------------------------------------------------------
+S46817.00    [YSAQ-282A]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service like a church or synagogue service, or
+a service at a mosque?
+ 
+UNIVERSE: All
+ 
+    2412       1 Never
+    1814       2 Once or twice
+     846       3 Less than once a month
+     476       4 About once a month
+     549       5 About twice a month
+     858       6 About once a week
+     345       7 Several times a week
+      16       8 Everyday
+  -------
+    7316
+ 
+Refusal(-1)           86
+Don't Know(-2)       100
+TOTAL =========>    7502   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1482
+ 
+Lead In: S46815.00[Default] S46816.00[Default]
+Default Next Question: S46818.00
+--------------------------------------------------------------------------------
+S54009.00    [CV_AGE_MONTHS_INT_DATE]                       Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 200: <200
+       0         201 TO 220
+       0         221 TO 240
+    1089         241 TO 260
+    2555         261 TO 280
+    2456         281 TO 300
+    1238         301 TO 320
+       0         321 TO 340
+  -------
+    7338
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7338   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1646
+ 
+Min:            251        Max:            318        Mean:              281.11
+ 
+Hard Minimum: [0]  Hard Maximum: [300]
+ 
+Lead In: S54008.00[Default]
+Default Next Question: S54010.00
+--------------------------------------------------------------------------------
+S54010.00    [CV_AGE_INT_DATE]                              Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+      83          20
+    1444          21
+    1502          22
+    1537          23
+    1473          24
+    1235          25
+      64          26
+       0          27 TO 99: Age 27 or greater
+  -------
+    7338
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7338   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1646
+ 
+Min:             20        Max:             26        Mean:               22.93
+ 
+Hard Minimum: [0]  Hard Maximum: [27]
+ 
+Lead In: S54009.00[Default]
+Default Next Question: S54048.00
+--------------------------------------------------------------------------------
+S55328.00    [YHHI-55709]                                   Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             WHAT IS R'S CURRENT RELIGIOUS PREFERENCE?
+ 
+(HAND R SHOWCARD AA)
+ 
+What is your current religious preference?
+ 
+UNIVERSE: All
+ 
+    1704       1 1. Roman Catholic
+    1547       2 2. Baptist
+     265       3 3. Methodist
+     260       4 4. Lutheran
+      74       5 5. Presbyterian
+      52       6 6. Episcopal/Anglican
+      61       7 7. United Church of Christ (or Congregationalist or Evangelical
+                      Reformed)
+     174       8 8. Disciples of Christ (or the Christian Church)
+      39       9 9. Reform (or Reformed Church in America or Christian Reformed 
+                      Church)
+      50      10 10. Holiness (Nazarene, Wesleyan, Free Methodist)
+     226      11 11. Pentecostal (Assembly of God, Pentecostal Holiness)
+     842      12 12. Nondenominational Christian (Including Bible Church)
+      77      31 28. Jehovah's Witness
+      14      32 29. Seventh Day Adventist
+     214      13 13. Other Protestant
+       9      14 14. Jewish - Orthodox
+      12      15 15. Jewish - Conservative
+      16      16 16. Jewish - Reform
+      12      17 17. Jewish - Other Jewish
+      76      18 18. Mormon (all types of Latter Day Saints)
+       7      19 19. Eastern Orthodox
+       7      20 20. Unitarian
+      46      21 21. Muslim (or Moslem or Islam)
+      28      22 22. Hindu/Buddhist
+       9      23 23. Native American Tribal Religion
+      19      24 24. Other organized religion (SPECIFY)
+     296      25 25. None, no religion - Agnostic (doesn't know if there is a 
+                      God)
+     106      26 26. None, no religion - Atheist (confident there is no God)
+     989      27 27. None, no religion - personal philosophy
+       0      28 Other - Recoded to Bah'ai
+       0      30 Other - Recoded to Greek, Roman, Norse Mythology
+       1      34 Other - Recoded to Scientology
+       2      35 Other - Recoded to Other Eastern (Sikh)
+       0      36 Other - Recoded to Satanic
+      12      37 Other - Recoded to Wicca/Witchcraft/Magic/Pagan
+       0     995 Supervisor Review
+      12     999 UNCODABLE
+  -------
+    7258
+ 
+Refusal(-1)           12
+Don't Know(-2)        68
+TOTAL =========>    7338   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1646
+ 
+Min:              1        Max:            999        Mean:               11.33
+ 
+Lead In: S55218.00[Default]  S55213.00[5:5]
+Default Next Question: S55329.00
+--------------------------------------------------------------------------------
+S63167.00    [YSAQ-282A]                                    Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service like a church or synagogue service, or
+a service at a mosque?
+ 
+UNIVERSE: All
+ 
+    2364       1 Never
+    1685       2 Once or twice
+     817       3 Less than once a month
+     511       4 About once a month
+     544       5 About twice a month
+     890       6 About once a week
+     343       7 Several times a week
+      30       8 Everyday
+  -------
+    7184
+ 
+Refusal(-1)           74
+Don't Know(-2)        80
+TOTAL =========>    7338   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1646
+ 
+Lead In: S63166.00[Default] S63165.00[Default]  S63164.00[0:0]
+Default Next Question: S63168.00
+--------------------------------------------------------------------------------
+S63168.00    [YSAQ-282A2]                                   Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             R DOES NOT NEED RELIGION FOR GOOD VALUES
+ 
+I don't need religion to have good values.
+ 
+UNIVERSE: All
+ 
+    3679       1 TRUE
+    3306       0 FALSE
+  -------
+    6985
+ 
+Refusal(-1)           96
+Don't Know(-2)       257
+TOTAL =========>    7338   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1646
+ 
+Lead In: S63167.00[Default]
+Default Next Question: S63169.00
+--------------------------------------------------------------------------------
+S63169.00    [YSAQ-282A3]                                   Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             R BELIEVES RELIGIOUS TEACHINGS ARE TO BE OBEYED EXACTLY AS WRITTEN
+ 
+The Bible/Koran/sacred texts should be obeyed exactly as written in every 
+situation.
+ 
+UNIVERSE: All
+ 
+    2283       1 TRUE
+    4014       0 FALSE
+  -------
+    6297
+ 
+Refusal(-1)          205
+Don't Know(-2)       836
+TOTAL =========>    7338   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1646
+ 
+Lead In: S63168.00[Default]
+Default Next Question: S63170.00
+--------------------------------------------------------------------------------
+S63170.00    [YSAQ-282A4]                                   Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             R ASKS GOD HELP MAKE DECISIONS
+ 
+I often ask God to help me make decisions.
+ 
+UNIVERSE: All
+ 
+    5118       1 TRUE
+    1962       0 FALSE
+  -------
+    7080
+ 
+Refusal(-1)          110
+Don't Know(-2)       148
+TOTAL =========>    7338   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1646
+ 
+Lead In: S63169.00[Default]
+Default Next Question: S63171.00
+--------------------------------------------------------------------------------
+S63171.00    [YSAQ-282A5]                                   Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             GOD NOTHING TO DO HAPPENS TO R
+ 
+God has nothing to do with what happens to me personally.
+ 
+UNIVERSE: All
+ 
+    1425       1 TRUE
+    5173       0 FALSE
+  -------
+    6598
+ 
+Refusal(-1)          139
+Don't Know(-2)       601
+TOTAL =========>    7338   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1646
+ 
+Lead In: S63170.00[Default]
+Default Next Question: S63172.00
+--------------------------------------------------------------------------------
+S63172.00    [YSAQ-282A6]                                   Survey Year: 2005
+  PRIMARY VARIABLE
+
+ 
+             R PRAYS MORE THAN ONCE A DAY
+ 
+I pray more than once a day.
+ 
+UNIVERSE: All
+ 
+    2518       1 TRUE
+    4496       0 FALSE
+  -------
+    7014
+ 
+Refusal(-1)          149
+Don't Know(-2)       175
+TOTAL =========>    7338   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1646
+ 
+Lead In: S63171.00[Default]
+Default Next Question: S63173.00
+--------------------------------------------------------------------------------
+S75011.00    [CV_AGE_MONTHS_INT_DATE]                       Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 200: <200
+       0         201 TO 220
+       0         221 TO 240
+       0         241 TO 260
+    2216         261 TO 280
+    2570         281 TO 300
+    2438         301 TO 320
+     335         321 TO 340
+  -------
+    7559
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7559   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1425
+ 
+Min:            262        Max:            327        Mean:              292.76
+ 
+Hard Minimum: [0]  Hard Maximum: [300]
+ 
+Lead In: S75010.00[Default]
+Default Next Question: S75012.00
+--------------------------------------------------------------------------------
+S75012.00    [CV_AGE_INT_DATE]                              Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+       0          20
+     133          21
+    1475          22
+    1541          23
+    1581          24
+    1548          25
+    1234          26
+      47          27 TO 99: Age 27 or greater
+  -------
+    7559
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7559   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1425
+ 
+Min:             21        Max:             27        Mean:                23.9
+ 
+Hard Minimum: [0]  Hard Maximum: [27]
+ 
+Lead In: S75011.00[Default]
+Default Next Question: S75052.00
+--------------------------------------------------------------------------------
+S83315.00    [YSAQ-282A]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service like a church or synagogue service, or
+a service at a mosque?
+ 
+UNIVERSE: All
+ 
+    2643       1 Never
+    1760       2 Once or twice
+     759       3 Less than once a month
+     477       4 About once a month
+     547       5 About twice a month
+     826       6 About once a week
+     340       7 Several times a week
+      19       8 Everyday
+  -------
+    7371
+ 
+Refusal(-1)           95
+Don't Know(-2)        93
+TOTAL =========>    7559   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1425
+ 
+Lead In: S83314.00[Default]
+Default Next Question: S83316.00
+--------------------------------------------------------------------------------
+T00084.00    [CV_AGE_MONTHS_INT_DATE]                       Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 200: <200
+       0         201 TO 220
+       0         221 TO 240
+       0         241 TO 260
+     746         261 TO 280
+    2501         281 TO 300
+    2543         301 TO 320
+    1628         321 TO 340
+       0         341 TO 360
+  -------
+    7418
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7418   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1566
+ 
+Min:            274        Max:            340        Mean:              304.17
+ 
+Hard Minimum: [0]  Hard Maximum: [300]
+ 
+Lead In: T00083.00[Default]
+Default Next Question: T00085.00
+--------------------------------------------------------------------------------
+T00085.00    [CV_AGE_INT_DATE]                              Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+       0          20
+       0          21
+     187          22
+    1461          23
+    1534          24
+    1534          25
+    1483          26
+    1219          27 TO 99: Age 27 or greater
+  -------
+    7418
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7418   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1566
+ 
+Min:             22        Max:             28        Mean:               24.86
+ 
+Hard Minimum: [0]  Hard Maximum: [27]
+ 
+Lead In: T00084.00[Default]
+Default Next Question: T00086.00
+--------------------------------------------------------------------------------
+T07394.00    [YSAQ-282A]                                    Survey Year: 2007
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service like a church or synagogue service, or
+a service at a mosque?
+ 
+UNIVERSE: All
+ 
+    2592       1 Never
+    1713       2 Once or twice
+     752       3 Less than once a month
+     521       4 About once a month
+     504       5 About twice a month
+     827       6 About once a week
+     334       7 Several times a week
+      21       8 Everyday
+  -------
+    7264
+ 
+Refusal(-1)           80
+Don't Know(-2)        74
+TOTAL =========>    7418   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1566
+ 
+Lead In: T07393.00[Default] T07392.00[Default]  T07391.00[0:0]
+Default Next Question: T07395.00
+--------------------------------------------------------------------------------
+T20110.00    [CV_AGE_MONTHS_INT_DATE]                       Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 200: <200
+       0         201 TO 220
+       0         221 TO 240
+       0         241 TO 260
+       0         261 TO 280
+    1688         281 TO 300
+    2580         301 TO 320
+    2474         321 TO 340
+     748         341 TO 360
+  -------
+    7490
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7490   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1494
+ 
+Min:            286        Max:            352        Mean:              316.59
+ 
+Lead In: T20109.00[Default]
+Default Next Question: T20111.00
+--------------------------------------------------------------------------------
+T20111.00    [CV_AGE_INT_DATE]                              Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+     163          23
+    1456          24
+    1509          25
+    1575          26
+    1527          27
+    1215          28
+      45          29: Age 29 or greater
+  -------
+    7490
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7490   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1494
+ 
+Min:             23        Max:             29        Mean:               25.89
+ 
+Lead In: T20110.00[Default]
+Default Next Question: T20112.00
+--------------------------------------------------------------------------------
+T21114.00    [YHHI-55709]                                   Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             WHAT IS R'S CURRENT RELIGIOUS PREFERENCE?
+ 
+(HAND R SHOWCARD AA)  What is your current religious preference?
+ 
+UNIVERSE: All
+ 
+    1620       1 1. Roman Catholic
+    1551       2 2. Baptist
+     240       3 3. Methodist
+     261       4 4. Lutheran
+      72       5 5. Presbyterian
+      50       6 6. Episcopal/Anglican
+      48       7 7. United Church of Christ (or Congregationalist or Evangelical
+                      Reformed)
+     151       8 8. Disciples of Christ (or the Christian Church)
+      41       9 9. Reform (or Reformed Church in America or Christian Reformed 
+                      Church)
+      49      10 10. Holiness (Nazarene, Wesleyan, Free Methodist)
+     244      11 11. Pentecostal (Assembly of God, Pentecostal Holiness)
+     980      12 12. Nondenominational Christian (Including Bible Church)
+      83      31 28. Jehovah's Witness
+      22      32 29. Seventh Day Adventist
+     272      13 13. Other Protestant
+      13      14 14. Jewish - Orthodox
+      14      15 15. Jewish - Conservative
+      16      16 16. Jewish - Reform
+      15      17 17. Jewish - Other Jewish
+      69      18 18. Mormon (all types of Latter Day Saints)
+       9      19 19. Eastern Orthodox
+      11      20 20. Unitarian
+      50      21 21. Muslim (or Moslem or Islam)
+      27      22 22. Hindu/Buddhist
+      15      23 23. Native American Tribal Religion
+      54      24 24. Other organized religion (SPECIFY)
+     357      25 25. None, no religion - Agnostic (doesn't know if there is a 
+                      God)
+     154      26 26. None, no religion - Atheist (confident there is no God)
+     903      27 27. None, no religion - personal philosophy
+       1      34 OTHER - RECODED TO SCIENTOLOGY
+       0      35 OTHER - RECODED TO OTHER EASTERN (SIKH)
+       0      36 OTHER - RECODED TO SATANIC
+       0      37 OTHER - RECODED TO WICCA/WITCHCRAFT/MAGIC/PAGAN
+       0     995 SUPERVISOR REVIEW
+       8     999 UNCODABLE
+  -------
+    7400
+ 
+Refusal(-1)           17
+Don't Know(-2)        73
+TOTAL =========>    7490   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1494
+ 
+Min:              1        Max:            999        Mean:               11.08
+ 
+Lead In: T21113.00[Default] T21112.00[Default]  T21107.00[1:1] T21106.00[1:1]
+Default Next Question: T21115.00
+--------------------------------------------------------------------------------
+T27817.00    [YSAQ-282A]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service like a church or synagogue service, or
+a service at a mosque?
+ 
+UNIVERSE: All
+ 
+    2546       1 Never
+    1746       2 Once or twice
+     765       3 Less than once a month
+     451       4 About once a month
+     496       5 About twice a month
+     898       6 About once a week
+     355       7 Several times a week
+      21       8 Everyday
+  -------
+    7278
+ 
+Refusal(-1)          120
+Don't Know(-2)        92
+TOTAL =========>    7490   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1494
+ 
+Lead In: T27816.00[Default]
+Default Next Question: T27818.00
+--------------------------------------------------------------------------------
+T27819.00    [YSAQ-282A2]                                   Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             R DOES NOT NEED RELIGION FOR GOOD VALUES
+ 
+I don't need religion to have good values.
+ 
+UNIVERSE: All
+ 
+    3970       1 TRUE
+    3213       0 FALSE
+  -------
+    7183
+ 
+Refusal(-1)          113
+Don't Know(-2)       194
+TOTAL =========>    7490   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1494
+ 
+Lead In: T27818.00[Default]
+Default Next Question: T27820.00
+--------------------------------------------------------------------------------
+T27820.00    [YSAQ-282A3]                                   Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             R BELIEVES RELIGIOUS TEACHINGS ARE TO BE OBEYED EXACTLY AS WRITTEN
+ 
+The [{RELIGTEXTFILL}] should be obeyed exactly as written in every situation.
+ 
+UNIVERSE: All
+ 
+    2448       1 TRUE
+    4164       0 FALSE
+  -------
+    6612
+ 
+Refusal(-1)          212
+Don't Know(-2)       666
+TOTAL =========>    7490   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1494
+ 
+Lead In: T27819.00[Default]
+Default Next Question: T27821.00
+--------------------------------------------------------------------------------
+T27821.00    [YSAQ-282A4]                                   Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             R ASKS GOD HELP MAKE DECISIONS
+ 
+I often ask God to help me make decisions.
+ 
+UNIVERSE: All
+ 
+    5097       1 TRUE
+    2112       0 FALSE
+  -------
+    7209
+ 
+Refusal(-1)          122
+Don't Know(-2)       159
+TOTAL =========>    7490   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1494
+ 
+Lead In: T27820.00[Default]
+Default Next Question: T27822.00
+--------------------------------------------------------------------------------
+T27822.00    [YSAQ-282A5]                                   Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             GOD NOTHING TO DO HAPPENS TO R
+ 
+God has nothing to do with what happens to me personally.
+ 
+UNIVERSE: All
+ 
+    1633       1 TRUE
+    5136       0 FALSE
+  -------
+    6769
+ 
+Refusal(-1)          139
+Don't Know(-2)       582
+TOTAL =========>    7490   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1494
+ 
+Lead In: T27821.00[Default]
+Default Next Question: T27823.00
+--------------------------------------------------------------------------------
+T27823.00    [YSAQ-282A6]                                   Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             R PRAYS MORE THAN ONCE A DAY
+ 
+I pray more than once a day.
+ 
+UNIVERSE: All
+ 
+    2745       1 TRUE
+    4418       0 FALSE
+  -------
+    7163
+ 
+Refusal(-1)          156
+Don't Know(-2)       171
+TOTAL =========>    7490   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1494
+ 
+Lead In: T27822.00[Default]
+Default Next Question: T27824.00
+--------------------------------------------------------------------------------
+T36014.00    [CV_AGE_MONTHS_INT_DATE]                       Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 200: <200
+       0         201 TO 220
+       0         221 TO 240
+       0         241 TO 260
+       0         261 TO 280
+     325         281 TO 300
+    2523         301 TO 320
+    2610         321 TO 340
+    2089         341 TO 360
+      12         361 TO 380
+  -------
+    7559
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7559   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1425
+ 
+Min:            297        Max:            363        Mean:              327.65
+ 
+Hard Minimum: [0]  Hard Maximum: [300]
+ 
+Lead In: T36013.00[Default]
+Default Next Question: T36015.00
+--------------------------------------------------------------------------------
+T36015.00    [CV_AGE_INT_DATE]                              Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+     262          24
+    1494          25
+    1553          26
+    1539          27
+    1545          28
+    1152          29
+      14          30 TO 31: Age 30 or greater
+  -------
+    7559
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7559   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1425
+ 
+Min:             24        Max:             30        Mean:               26.81
+ 
+Hard Minimum: [0]  Hard Maximum: [27]
+ 
+Lead In: T36014.00[Default]
+Default Next Question: T36016.00
+--------------------------------------------------------------------------------
+T44950.00    [YSAQ-282A]                                    Survey Year: 2009
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service like a church or synagogue service, or
+a service at a mosque?
+ 
+UNIVERSE: All
+ 
+    2673       1 Never
+    1730       2 Once or twice
+     818       3 Less than once a month
+     468       4 About once a month
+     485       5 About twice a month
+     811       6 About once a week
+     352       7 Several times a week
+      23       8 Everyday
+  -------
+    7360
+ 
+Refusal(-1)           93
+Don't Know(-2)       106
+TOTAL =========>    7559   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1425
+ 
+Lead In: T44949.00[Default]
+Default Next Question: T44951.00
+--------------------------------------------------------------------------------
+T52013.00    [CV_AGE_MONTHS_INT_DATE]                       Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             RS AGE IN MONTHS AS OF INTERVIEW DATE
+ 
+Age in continuous month scheme as of interview date.
+ 
+       0           0 TO 300
+    1172         301 TO 320
+    2585         321 TO 340
+    2500         341 TO 360
+    1222         361 TO 380
+  -------
+    7479
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7479   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1505
+ 
+Min:            310        Max:            377        Mean:              340.66
+ 
+Hard Minimum: [0]  Hard Maximum: [300]
+ 
+Lead In: T52012.00[Default]
+Default Next Question: T52014.00
+--------------------------------------------------------------------------------
+T52014.00    [CV_AGE_INT_DATE]                              Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             RS AGE AT INTERVIEW DATE
+ 
+Age as of interview date.
+ 
+     146          25
+    1469          26
+    1497          27
+    1565          28
+    1520          29
+    1248          30
+      34          31
+  -------
+    7479
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7479   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1505
+ 
+Min:             25        Max:             31        Mean:                27.9
+ 
+Hard Minimum: [0]  Hard Maximum: [27]
+ 
+Lead In: T52013.00[Default]
+Default Next Question: T52015.00
+--------------------------------------------------------------------------------
+T61434.00    [YSAQ-282A]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOW OFTEN R ATTENDED WORSHIP SERVICE IN PAST 12 MONTHS
+ 
+And now a question about your religious background. In the past 12 months, how 
+often have you attended a worship service like a church or synagogue service, or
+a service at a mosque?
+ 
+UNIVERSE: All
+ 
+    2698       1 Never
+    1654       2 Once or twice
+     707       3 Less than once a month
+     459       4 About once a month
+     497       5 About twice a month
+     906       6 About once a week
+     323       7 Several times a week
+      27       8 Everyday
+  -------
+    7271
+ 
+Refusal(-1)          111
+Don't Know(-2)        94
+TOTAL =========>    7476   VALID SKIP(-4)       3     NON-INTERVIEW(-5)    1505
+ 
+Lead In: T61433.00[Default]
+Default Next Question: T61435.00
