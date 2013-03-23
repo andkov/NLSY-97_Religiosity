@@ -1,4 +1,4 @@
-# rm(list=ls(all=TRUE)) #Disable when working in "NLSY-97_Religiosity.Rproj"
+rm(list=ls(all=TRUE)) #Disable when working in "NLSY-97_Religiosity.Rproj"
 require(ggplot2)
 require(plyr)
 require(reshape2)
