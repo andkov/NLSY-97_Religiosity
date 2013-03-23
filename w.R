@@ -30,6 +30,7 @@ forecast<- function( df ) {#df stands for 'data.frame'
   return( dsResult)
 }
 new<-forecast(ds)
+print(new)
 
 # Create a data.frame that has a row for each unique summarize each cohort*time combination.
 new <- plyr::ddply(mydata, .variables=c("cohort","G00", "G01"), .fun=forecast)
