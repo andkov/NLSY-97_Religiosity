@@ -175,7 +175,7 @@ dsSWprops <- dsSWcatatrans[,c("cohort", "time", "age",
                              "pA", "pag", "pai", "paa")]
 # melt into LONG with prevalance as the outcome
 dsSLprops <- reshape2::melt(dsSWprops, id.vars=c("time", "cohort","age"))  ## id.vars declares MEASURED variables (as opposed to RESPONSE variable)
-dsSLprops<- plyr::rename(dsSLprops, replace=c(variable="catatrans", value="proportion"))
+dsSLprops<- plyr::rename(dsSLprops, replace=c(variable="catatrans", value="obs_proportion"))
 # Create toggle variables for faceting in the 3x3 parameter matrix
 dsSLprops$mx =      ifelse((dsSLprops$catatrans %in% c("pA","pI","pG")),substr(dsSLprops$catatrans,2,2),
                                 toupper(substr(dsSLprops$catatrans,2,2)))
@@ -192,7 +192,7 @@ dsSLprops$catatrans<-factor(dsSLprops$catatrans,levels=c("cohort", "time", "age"
                                                          "pI", "pig", "pii", "pia",
                                                          "pA", "pag", "pai", "paa"))
 # cast into the wide format for evaluating model solutions
-dsOBSprops<-dcast(dsSLprops,value.var="proportion", cohort ~ catatransT,mean)
+dsOBSprops<-dcast(dsSLprops,value.var="obs_proportion", cohort ~ catatransT,mean)
 
 
 # # remove all but one dataset

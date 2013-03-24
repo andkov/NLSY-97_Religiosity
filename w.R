@@ -57,3 +57,25 @@ forecast<- function( df ) {
 }
 new<-forecast(ds)
 print(new)
+
+As <- c(0.401088929, 0.340290381,  0.249546279, 0.218693285,    0.180580762,     0.167876588,    0.157894737,    0.158802178,  0.161524501)
+Bs <- c(0.233212341, 0.256805808,  0.288566243, 0.305807623,    0.27676951,       0.270417423,    0.229582577,    0.250453721,  0.237749546)
+Cs  <-c(0.36569873,  0.402903811,  0.461887477, 0.475499093,    0.542649728,     0.561705989,    0.612522686,    0.590744102,  0.600725953)
+years <- seq_along(As)
+Tab <- c(.6)
+Tac <- c(.2)
+Tbc <- c(.5)
+Tca <-c(1)
+Tcb <-c(1)
+Tbc <-c(1)
+#....more Ts....
+dsO <- data.frame(Year=years, A=As, B=Bs, C=Cs) #Stands for observed
+dsP <- data.frame(Year=years, A=NA_real_, B=NA_real_, C=NA_real_) #Stands for predicted
+
+#Make sure the 'years' array is sorted in ascending order.
+for( i in years[-1] ) {
+  dsP[dsP$Year == i, "A"] <- dsO[dsO$Year == i-1, "A"] + dsO[dsO$Year == i-1, "B"]*Tbc + dsO[dsO$Year == i-1, "C"]*Tca
+  dsP[dsP$Year == i, "B"] <- dsO[dsO$Year == i-1, "B"] + dsO[dsO$Year == i-1, "A"]*Tab + dsO[dsO$Year == i-1, "C"]*Tcb
+  dsP[dsP$Year == i, "C"] <- dsO[dsO$Year == i-1, "C"] + dsO[dsO$Year == i-1, "A"]*Tac + dsO[dsO$Year == i-1, "B"]*Tbc
+  
+}
