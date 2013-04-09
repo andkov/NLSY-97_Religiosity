@@ -9,16 +9,19 @@ require(car)
 pathDir<-file.path(getwd())
 
 # DATASET NAMES
-#   dsSource      - the clean and processed NLSY file from the source(08032013)
-#   dsWattendResp  - subset(dsSource) vars:  original responses to the question (1-8)
-#   dsWattend      - subset(dsSource) vars:  Att(endance)Cat(egories) (G-I-A) and  Transitions (gg-gi-ga-ig-ii-ia-ag-ai-aa)
-#   dsWcountsProps - summarized of both Counts and Proportions 
-#   dsWcounts      - subset(dsWcountsProps) vars   of AttCat (G-I-A) and Transitions (gg-...-aa)
-#   dsWprops       - subset(dsWcountsProps) vars  of AttCat (G-I-A) and Transitions (gg-...-aa)
+#   dsSource      -  (0) the clean and processed NLSY file from the source(08032013)
+#   dsW_attend    -      Wide timeseris, subset(dsSource) vars:  original responses to the question (1-8)
+#   dsL_attend    -      Long time series, elongated dsW_attend
+#
+#   dsW_catatrans  - (1) CATATRANS: CATegories of religious Attendance and TRANSitions among them
+#                        Wide timeseries: subset(dsSource)
+#   dsL_catatrans  - (2) Long timeseries, elongated dsW_catatrans
+#   dsWS_catatrans - (3) Wide summaries of catatrans, both counts and proportions, summaried dsL_catatrans
+#   dsWSP_catatrans- (4) Wide summaries of catatrans as proportions, subset(dsWS_catatrans)
+#   dsLSP_catatrans- (5) Long summaries of catatrans as proportion, elongated dsWSP_catatrans
+#   dsWSC_catatrans- (4b)  Wide summaries of catatrans as counts, subset(dsWS_catatrans)
+#   dsLSC_catatrans- (5b)  Long summaries of catatrans as counts, elongated dsWSC_catatrans
 
-#   dsWpropsObs     - observed proportions ready for modeling
-#   dsWcountsObs    - observed counts in ready for modeling
-#   dsL*****  - eLONGated datasets 
 
 # # import the results of "data input and processing.R" 
 # Source<-c("NLSY97_Religion_08032013")
@@ -31,10 +34,10 @@ dsSource <- rename(dsSource, c(byear="cohort"))
 keepvar <- c("id", "cohort", "attend_2000", 
              "attend_2001","attend_2002","attend_2003","attend_2004","attend_2005",
              "attend_2006","attend_2007","attend_2008","attend_2009","attend_2010")
-dsWattendResp <- dsSource[keepvar]
+dsW_attend <- dsSource[keepvar]
 
 #Transform the wide dataset into a long dataset
-dsLong <- reshape2::melt(dsWattendResp, id.vars=c("id", "cohort"))  ## id.vars declares MEASURED variables (as opposed to RESPONSE variable)
+dsLong <- reshape2::melt(dsW_attend, id.vars=c("id", "cohort"))  ## id.vars declares MEASURED variables (as opposed to RESPONSE variable)
 dsLong$variable <- gsub(pattern="attend_", replacement="", x=dsLong$variable) #Strip off the prefix
 dsLong$variable <- as.integer(dsLong$variable) #Convert to a number.
 dsLong <- plyr::rename(dsLong, replace=c(variable="time", value="attendence"))
@@ -43,9 +46,9 @@ dsLong<-mutate(dsLong,age=time-cohort) # computes age in years at time of interv
 dsLong<-dsLong[c("id", "cohort", "time", "timec", "age","attendence")]
 #Sort for the sake of visual inspection.
 dsLong<-dsLong[order(dsLong$id,dsLong$time),]
-dsLattendResp<-dsLong
+dsL_attend<-dsLong
 rm(dsLong)
-head(dsLattendResp, 20)
+head(dsL_attend, 20)
 
 
 
@@ -57,10 +60,10 @@ keepvar <- c("id", "cohort", "attcat_2000",
              "attcat_2006","attcat_2007","attcat_2008","attcat_2009","attcat_2010",
              "transcat_2001","transcat_2002","transcat_2003","transcat_2004","transcat_2005",
              "transcat_2006","transcat_2007","transcat_2008","transcat_2009","transcat_2010")
-dsWcatatrans <- dsSource[keepvar]
+dsW_catatrans <- dsSource[keepvar]
 
 #Transform the wide dataset into a long dataset - Use generic dsLong name for this common transformation
-dsLong <- reshape2::melt(dsWcatatrans, id.vars=c("id", "cohort"))  ## id.vars declares MEASURED variables (as opposed to RESPONSE variable)
+dsLong <- reshape2::melt(dsW_catatrans, id.vars=c("id", "cohort"))  ## id.vars declares MEASURED variables (as opposed to RESPONSE variable)
 
 dsLong$value =      ifelse((dsLong$value %in% c(1)),"A",
                     ifelse((dsLong$value %in% c(2)),"I",
@@ -90,9 +93,9 @@ dsLong$variable <- as.integer(dsLong$variable) #Convert to a number.
 dsLong <- plyr::rename(dsLong, replace=c(variable="time", value="catatrans"))
 dsLong<-mutate(dsLong,age=time-cohort) # computes age in years at time of interview
 dsLong<-dsLong[c("id", "cohort", "time","age","catatrans")] # select and order variables
-dsLcatatrans <- dsLong[order(dsLong$id, dsLong$time), ] # sort for visual inspection
+dsL_catatrans <- dsLong[order(dsLong$id, dsLong$time), ] # sort for visual inspection
 rm(dsLong) # dsLong a generic name of datasets in these transformations 
-head(dsLcatatrans, 20) 
+head(dsL_catatrans, 20) 
 
 # prefix notation in variable names:
 # n** = number count of each unique $catatrans (total of 12)  for that year
@@ -143,57 +146,54 @@ SummarizeCohortTime <- function( df ) {#df stands for 'data.frame'
   return( dsResult)
 }
 # Create a data.frame that has a row for each unique summarize each cohort*time combination.
-dsSWcatatrans <- plyr::ddply(dsLcatatrans, .variables=c("cohort", "time","age"), .fun=SummarizeCohortTime)
+dsWS_catatrans <- plyr::ddply(dsL_catatrans, .variables=c("cohort", "time","age"), .fun=SummarizeCohortTime)
 
-#############################################################################
+##########################################################################1##
 # Create dataset with count NUMBERS of subjects in categories and transitions
-dsSWcounts <- dsSWcatatrans[,c("cohort", "time", "age",
+dsWSC_catatrans <- dsWS_catatrans[,c("cohort", "time", "age",
                               "nG","ngg", "ngi", "nga",
                               "nI", "nig", "nii", "nia",
                               "nA", "nag", "nai", "naa")]
 # melt into LONG with count NUMBERS as the outcome
-dsSLcounts <- reshape2::melt(dsSWcounts, id.vars=c("time", "cohort","age"))  ## id.vars declares MEASURED variables (as opposed to RESPONSE variable)
-dsSLcounts<- plyr::rename(dsSLcounts, replace=c(variable="catatrans", value="count"))
-dsSLcounts<-mutate(dsSLcounts,catatransT=paste0(catatrans,substr(time,3,4)))
+dsLSC_catatrans <- reshape2::melt(dsWSC_catatrans, id.vars=c("time", "cohort","age"))  ## id.vars declares MEASURED variables (as opposed to RESPONSE variable)
+dsLSC_catatrans<- plyr::rename(dsLSC_catatrans, replace=c(variable="catatrans", value="count"))
+dsLSC_catatrans<-mutate(dsLSC_catatrans,catatransT=paste0(catatrans,substr(time,3,4)))
 
 # cast into the SUMMARY WIDE format for evaluating model solutions
-dsSLcounts<-mutate(dsSLcounts,catatransT=paste0(catatrans,substr(time,3,4)))
+dsLSC_catatrans<-mutate(dsLSC_catatrans,catatransT=paste0(catatrans,substr(time,3,4)))
 # order $catatrans before casting
-dsSLcounts$catatrans<-factor(dsSLcounts$catatrans,levels=c("cohort", "time", "age",
+dsLSC_catatrans$catatrans<-factor(dsLSC_catatrans$catatrans,levels=c("cohort", "time", "age",
                                            "nG","ngg", "ngi", "nga",
                                            "nI" , "nig", "nii", "nia",
                                            "nA", "nag", "nai", "naa"))
-dsOBScounts<-dcast(dsSLcounts,value.var="count", cohort ~ catatransT,mean)
 
 
 
-#############################################################################
+
+##########################################################################2##
 # Create dataset with PROPORTION  of NUMBERS from total 
-dsSWprops <- dsSWcatatrans[,c("cohort", "time", "age",
+dsWSP_catatrans <- dsWS_catatrans[,c("cohort", "time", "age",
                              "pG","pgg", "pgi", "pga",
                              "pI", "pig", "pii", "pia",
                              "pA", "pag", "pai", "paa")]
 # melt into LONG with prevalance as the outcome
-dsSLprops <- reshape2::melt(dsSWprops, id.vars=c("time", "cohort","age"))  ## id.vars declares MEASURED variables (as opposed to RESPONSE variable)
-dsSLprops<- plyr::rename(dsSLprops, replace=c(variable="catatrans", value="obs_proportion"))
+dsLSP_catatrans <- reshape2::melt(dsWSP_catatrans, id.vars=c("time", "cohort","age"))  ## id.vars declares MEASURED variables (as opposed to RESPONSE variable)
+dsLSP_catatrans<- plyr::rename(dsLSP_catatrans, replace=c(variable="catatrans", value="obs_proportion"))
 # Create toggle variables for faceting in the 3x3 parameter matrix
-dsSLprops$mx =      ifelse((dsSLprops$catatrans %in% c("pA","pI","pG")),substr(dsSLprops$catatrans,2,2),
-                                toupper(substr(dsSLprops$catatrans,2,2)))
-dsSLprops$my =      ifelse((dsSLprops$catatrans %in% c("pA","pI","pG")),substr(dsSLprops$catatrans,2,2),
-                                toupper(substr(dsSLprops$catatrans,3,3)))
-dsSLprops$mx<-factor(dsSLprops$mx,levels=c("G","I","A"))
-dsSLprops$my<-factor(dsSLprops$my,levels=c("G","I","A"))
-str(dsSLprops)
+dsLSP_catatrans$mx =      ifelse((dsLSP_catatrans$catatrans %in% c("pA","pI","pG")),substr(dsLSP_catatrans$catatrans,2,2),
+                                toupper(substr(dsLSP_catatrans$catatrans,2,2)))
+dsLSP_catatrans$my =      ifelse((dsLSP_catatrans$catatrans %in% c("pA","pI","pG")),substr(dsLSP_catatrans$catatrans,2,2),
+                                toupper(substr(dsLSP_catatrans$catatrans,3,3)))
+dsLSP_catatrans$mx<-factor(dsLSP_catatrans$mx,levels=c("G","I","A"))
+dsLSP_catatrans$my<-factor(dsLSP_catatrans$my,levels=c("G","I","A"))
+str(dsLSP_catatrans)
 # create an interaction variable catatran*time
-dsSLprops<-mutate(dsSLprops,catatransT=paste0(catatrans,substr(time,3,4)))
+dsLSP_catatrans<-mutate(dsLSP_catatrans,catatransT=paste0(catatrans,substr(time,3,4)))
 # order $catatrans before casting
-dsSLprops$catatrans<-factor(dsSLprops$catatrans,levels=c("cohort", "time", "age",
+dsLSP_catatrans$catatrans<-factor(dsLSP_catatrans$catatrans,levels=c("cohort", "time", "age",
                                                          "pG","pgg", "pgi", "pga",
                                                          "pI", "pig", "pii", "pia",
                                                          "pA", "pag", "pai", "paa"))
-# cast into the wide format for evaluating model solutions
-dsOBSprops<-dcast(dsSLprops,value.var="obs_proportion", cohort ~ catatransT,mean)
-
 
 # # remove all but one dataset
 # rm(list=setdiff(ls(), "dsOBSprop"))
