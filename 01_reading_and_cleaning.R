@@ -158,44 +158,51 @@ dsSource <- dsSource[dsSource$attend_2008 %in% attendcategoreis, ]
 dsSource <- dsSource[dsSource$attend_2009 %in% attendcategoreis, ]
 dsSource <- dsSource[dsSource$attend_2010 %in% attendcategoreis, ]
 
-# create variable to record a summarized category of attendance
-Absentees<-c(1,2)
-Irregulars<-c(3,4,5)
-Goers<-c(6,7,8)
+# GIA332 - create variable to record a summarized category of attendance
+# Goers<-c(8,7,6)
+# Irregulars<-c(5,4,3)
+# Absentees<-c(2,1)
 
-dsSource$attcat_2000=ifelse((dsSource$attend_2000 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2000 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2000 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2001=ifelse((dsSource$attend_2001 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2001 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2001 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2002=ifelse((dsSource$attend_2002 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2002 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2002 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2003=ifelse((dsSource$attend_2003 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2003 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2003 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2004=ifelse((dsSource$attend_2004 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2004 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2004 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2005=ifelse((dsSource$attend_2005 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2005 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2005 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2006=ifelse((dsSource$attend_2006 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2006 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2006 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2007=ifelse((dsSource$attend_2007 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2007 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2007 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2008=ifelse((dsSource$attend_2008 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2008 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2008 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2009=ifelse((dsSource$attend_2009 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2009 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2009 %in% c(6,7,8)),3,"ERROR")))
-dsSource$attcat_2010=ifelse((dsSource$attend_2010 %in% c(1,2)),1,
-                            ifelse((dsSource$attend_2010 %in% c(3,4,5)),2,
-                                   ifelse((dsSource$attend_2010 %in% c(6,7,8)),3,"ERROR")))
+# # GIA431 - create variable to record a summarized category of attendance
+Goers<-c(8,7,6,5)
+Irregulars<-c(4,3,2)
+Absentees<-c(1)
+
+# dsSource[1:20,"attend_2000"]#,"attcat_2000"]
+
+dsSource$attcat_2000=ifelse((dsSource$attend_2000 %in% Absentees),1,
+                            ifelse((dsSource$attend_2000 %in% Irregulars),2,
+                                   ifelse((dsSource$attend_2000 %in% Goers),3,"ERROR")))
+dsSource$attcat_2001=ifelse((dsSource$attend_2001 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2001 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2001 %in% c(Goers)),3,"ERROR")))
+dsSource$attcat_2002=ifelse((dsSource$attend_2002 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2002 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2002 %in% c(Goers)),3,"ERROR")))
+dsSource$attcat_2003=ifelse((dsSource$attend_2003 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2003 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2003 %in% c(Goers)),3,"ERROR")))
+dsSource$attcat_2004=ifelse((dsSource$attend_2004 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2004 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2004 %in% c(Goers)),3,"ERROR")))
+dsSource$attcat_2005=ifelse((dsSource$attend_2005 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2005 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2005 %in% c(Goers)),3,"ERROR")))
+dsSource$attcat_2006=ifelse((dsSource$attend_2006 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2006 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2006 %in% c(Goers)),3,"ERROR")))
+dsSource$attcat_2007=ifelse((dsSource$attend_2007 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2007 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2007 %in% c(Goers)),3,"ERROR")))
+dsSource$attcat_2008=ifelse((dsSource$attend_2008 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2008 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2008 %in% c(Goers)),3,"ERROR")))
+dsSource$attcat_2009=ifelse((dsSource$attend_2009 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2009 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2009 %in% c(Goers)),3,"ERROR")))
+dsSource$attcat_2010=ifelse((dsSource$attend_2010 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2010 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2010 %in% c(Goers)),3,"ERROR")))
 
 # create variables that trans the transition between categories
 dsSource$transcat_2001<-paste0(dsSource$attcat_2000,dsSource$attcat_2001)
