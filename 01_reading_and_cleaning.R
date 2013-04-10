@@ -1,4 +1,4 @@
-rm(list=ls(all=TRUE)) #Disable when working in "NLSY-97_Religiosity.Rproj"
+# rm(list=ls(all=TRUE)) #Disable when working in "NLSY-97_Religiosity.Rproj"
 require(ggplot2)
 require(plyr)
 require(reshape2)
@@ -158,21 +158,35 @@ dsSource <- dsSource[dsSource$attend_2008 %in% attendcategoreis, ]
 dsSource <- dsSource[dsSource$attend_2009 %in% attendcategoreis, ]
 dsSource <- dsSource[dsSource$attend_2010 %in% attendcategoreis, ]
 
-# GIA332 - create variable to record a summarized category of attendance
-# Goers<-c(8,7,6)
-# Irregulars<-c(5,4,3)
-# Absentees<-c(2,1)
 
-# # GIA431 - create variable to record a summarized category of attendance
-Goers<-c(8,7,6,5)
-Irregulars<-c(4,3,2)
-Absentees<-c(1)
+#Disabled. The option is choses in "EMOSA_datasets.R" code.
+# # GIA332 - create variable to record a summarized category of attendance
+# # Goers<-c(8,7,6)
+# # Irregulars<-c(5,4,3)
+# # Absentees<-c(2,1)
+# 
+# # # GIA431 - create variable to record a summarized category of attendance
+# Goers<-c(8,7,6,5)
+# Irregulars<-c(4,3,2)
+# Absentees<-c(1)
 
 # dsSource[1:20,"attend_2000"]#,"attcat_2000"]
+# 
+# for (i in 2000:2010){
+#   yearatt=paste0("attend_",i)
+#   yearcat=paste0("attcat_",i)
+#   get("dsSource$",yearcat)=rep(NA,nrow(dsSource)) 
+#   
+# get("dsSource$",yearcat)=ifelse((get("dsSource$",yearatt) %in% Absentees),1,
+#                             ifelse((get("dsSource$",yearatt) %in% Irregulars),2,
+#                                    ifelse((get("dsSource$",yearatt) %in% Goers),3,"ERROR")))
+# }
+# 
+# dsSource[1:20,c("attend_2000","attcat_2000")]
 
-dsSource$attcat_2000=ifelse((dsSource$attend_2000 %in% Absentees),1,
-                            ifelse((dsSource$attend_2000 %in% Irregulars),2,
-                                   ifelse((dsSource$attend_2000 %in% Goers),3,"ERROR")))
+dsSource$attcat_2000=ifelse((dsSource$attend_2000 %in% c(Absentees)),1,
+                            ifelse((dsSource$attend_2000 %in% c(Irregulars)),2,
+                                   ifelse((dsSource$attend_2000 %in% c(Goers)),3,"ERROR")))
 dsSource$attcat_2001=ifelse((dsSource$attend_2001 %in% c(Absentees)),1,
                             ifelse((dsSource$attend_2001 %in% c(Irregulars)),2,
                                    ifelse((dsSource$attend_2001 %in% c(Goers)),3,"ERROR")))
