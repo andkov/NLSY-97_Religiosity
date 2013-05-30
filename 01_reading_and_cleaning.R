@@ -162,7 +162,7 @@ dsSource <- dsSource[dsSource$attend_2010 %in% attendcategoreis, ]
 
 
 #Disabled. The option is choses in "EMOSA_datasets.R" code.
-GIA332 - create variable to record a summarized category of attendance
+#GIA332 - create variable to record a summarized category of attendance
 Goers<-c(8,7,6)
 Irregulars<-c(5,4,3)
 Absentees<-c(2,1)
