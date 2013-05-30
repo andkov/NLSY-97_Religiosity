@@ -1,4 +1,4 @@
-# rm(list=ls(all=TRUE)) #Disable when working in "NLSY-97_Religiosity.Rproj"
+# rm(list=ls(all=TRUE)) #Disable when  NOT working in "NLSY-97_Religiosity.Rproj"
 require(ggplot2)
 require(plyr)
 require(reshape2)
@@ -9,11 +9,13 @@ require(car)
 years<-1980:1984
 
 pathDir<-file.path(getwd())
-pathGitHub <- file.path("C:/Users/inspirion/Documents/GitHub") # locate the "GitHub" folder on your computer
+pathGitHub <- file.path("C:/Users/inspirion/Documents/GitHub")
+pathNLSY<-"NLSY-97_Religiosity"
+# locate the "GitHub" folder on your computer
 # Choose datasource if working with more than one
 #       "Database_ResponseOfInterest_DateOfDownload"
 dataSource<-c("NLSY97_Religion_08032013")  
-pathDataSource<-file.path(pathDir,dataSource,paste0(dataSource,".dct"))
+pathDataSource<-file.path(pathGitHub,pathNLSY,dataSource,paste0(dataSource,".dct"))
 # pathVarNames<-file.path(pathDir,dataSource, paste0(dataSource,"-value-labels.do"))
 
 # input the file with the question id and labels
@@ -160,10 +162,10 @@ dsSource <- dsSource[dsSource$attend_2010 %in% attendcategoreis, ]
 
 
 #Disabled. The option is choses in "EMOSA_datasets.R" code.
-# # GIA332 - create variable to record a summarized category of attendance
-# # Goers<-c(8,7,6)
-# # Irregulars<-c(5,4,3)
-# # Absentees<-c(2,1)
+GIA332 - create variable to record a summarized category of attendance
+Goers<-c(8,7,6)
+Irregulars<-c(5,4,3)
+Absentees<-c(2,1)
 # 
 # # # GIA431 - create variable to record a summarized category of attendance
 # Goers<-c(8,7,6,5)
