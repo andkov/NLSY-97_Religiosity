@@ -41,7 +41,7 @@ allCohorts<-c("1980","1981","1982","1983","1984" )
 cohorts<-cohortYear # cohortYear or allCohorts - markes the drawing with cohort info
 pathFileOut<-file.path(pathImageOut,paste0(slide,"_",cohortYear,".png"))
 slide<-"slide00"
-dsFORp <- subset(dsLattendResp, cohort %in% allCohorts)
+dsFORp <- subset(dsL_attend, cohort %in% allCohorts)
 #------------------------------------------------------#
 
 p<-ggplot(dsFORp, aes(x=factor(age), fill=factor(attendence)))+
