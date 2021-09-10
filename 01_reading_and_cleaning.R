@@ -9,7 +9,8 @@ require(car)
 years<-1980:1984
 
 pathDir<-file.path(getwd())
-pathGitHub <- file.path("C:/Users/inspirion/Documents/GitHub")
+# pathGitHub <- file.path("C:/Users/inspirion/Documents/GitHub")
+pathGitHub <- file.path("C:/Users/koval/Documents/GitHub/andkov/")
 pathNLSY<-"NLSY-97_Religiosity"
 # locate the "GitHub" folder on your computer
 # Choose datasource if working with more than one
